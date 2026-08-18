@@ -358,7 +358,7 @@ export default function Home() {
               </button>
             ))}
             <a href={PHONE_HREF}>
-              <Button size="sm" className="gap-2 bg-primary hover:bg-primary/90 text-white cta-pulse">
+              <Button size="sm" className="gap-2 bg-cta hover:bg-cta/90 text-cta-foreground cta-pulse">
                 <Phone className="size-4" />
                 <span className="hidden xl:inline">{PHONE}</span>
                 <span className="xl:hidden">Anrufen</span>
@@ -392,7 +392,7 @@ export default function Home() {
                   ))}
                   <Separator className="my-2" />
                   <a href={PHONE_HREF} className="mt-2">
-                    <Button className="w-full gap-2 bg-primary hover:bg-primary/90 text-white">
+                    <Button className="w-full gap-2 bg-cta hover:bg-cta/90 text-cta-foreground">
                       <Phone className="size-4" />{PHONE}
                     </Button>
                   </a>
@@ -432,12 +432,12 @@ export default function Home() {
                 </motion.p>
 
                 <motion.div variants={fadeUp} className="mt-8 flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="gap-2 text-base px-8 bg-white text-primary hover:bg-white/90 font-semibold cta-pulse" onClick={() => scrollTo('#kontakt')}>
+                  <Button size="lg" className="gap-2 text-base px-8 bg-cta text-white hover:bg-cta/90 font-semibold cta-pulse" onClick={() => scrollTo('#kontakt')}>
                     Termin vereinbaren
                     <ChevronRight className="size-4" />
                   </Button>
                   <a href={PHONE_HREF}>
-                    <Button size="lg" variant="outline" className="gap-2 text-base px-8 border-white/50 text-white hover:bg-white/10 hover:text-white">
+                    <Button size="lg" variant="outline" className="gap-2 text-base px-8 border-white/50 text-white hover:bg-white/10 hover:text-white font-semibold">
                       <Phone className="size-4" />Jetzt anrufen
                     </Button>
                   </a>
@@ -483,13 +483,13 @@ export default function Home() {
         </Section>
 
         {/* ==================== WHY US ==================== */}
-        <Section id="ueber-uns" className="bg-gradient-to-br from-primary/10 via-primary/5 to-emerald-50">
+        <Section id="ueber-uns" className="bg-gradient-to-br from-primary/8 via-primary/4 to-[#f0f4ff]">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Image */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} variants={scaleIn} className="relative">
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
                 <Image src="/images/doctor-portrait.png" alt="Dr. Faiz Eissa - Zahnarzt in Darmstadt" fill className="object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
               </div>
               {/* Floating card */}
               <div className="absolute -bottom-6 -right-4 md:right-8 bg-white rounded-xl shadow-xl p-4 flex items-center gap-3">
@@ -541,7 +541,7 @@ export default function Home() {
         <section className="relative py-16 md:py-20 overflow-hidden">
           <div className="absolute inset-0 -z-10">
             <Image src="/images/patients-happy.png" alt="Zufriedene Patienten" fill className="object-cover" />
-            <div className="absolute inset-0 bg-primary/90" />
+            <div className="absolute inset-0 bg-primary/92" />
           </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
@@ -609,7 +609,7 @@ export default function Home() {
         </Section>
 
         {/* ==================== LANGUAGES ==================== */}
-        <Section id="sprachen" className="bg-gradient-to-b from-primary/8 to-transparent">
+        <Section id="sprachen" className="bg-gradient-to-b from-primary/6 to-transparent">
           <SectionHeading>Wir sprechen Ihre Sprache</SectionHeading>
           <p className="text-center text-muted-foreground max-w-2xl mx-auto -mt-8 mb-12">Fuer eine angenehme und verstaendliche Kommunikation bieten wir Beratungen in mehreren Sprachen an.</p>
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} variants={stagger} className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -629,7 +629,7 @@ export default function Home() {
 
         {/* ==================== CTA SECTION ==================== */}
         <section className="relative py-20 md:py-28 overflow-hidden">
-          <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary via-primary to-emerald-700" />
+          <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary via-primary to-[#2956B2]" />
           {/* Decorative circles */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
           <div className="absolute bottom-0 left-0 w-72 h-72 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
@@ -641,7 +641,7 @@ export default function Home() {
                 <p className="text-white/85 text-lg md:text-xl mb-10">Ihr Weg zu einem gesunden und strahlenden Laecheln beginnt hier. Vereinbaren Sie noch heute Ihren Termin.</p>
               </motion.div>
               <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="gap-2 text-base px-10 bg-white text-primary hover:bg-white/90 font-semibold shadow-lg" onClick={() => scrollTo('#kontakt')}>
+                <Button size="lg" className="gap-2 text-base px-10 bg-cta text-white hover:bg-cta/90 font-semibold shadow-lg" onClick={() => scrollTo('#kontakt')}>
                   Termin vereinbaren <ChevronRight className="size-4" />
                 </Button>
                 <a href={PHONE_HREF}>
@@ -721,7 +721,7 @@ export default function Home() {
                       <Label htmlFor="nachricht">Nachricht</Label>
                       <Textarea id="nachricht" value={formData.nachricht} onChange={(e) => setFormData({ ...formData, nachricht: e.target.value })} placeholder="Ihre Nachricht..." rows={4} className="mt-1" />
                     </div>
-                    <Button type="submit" disabled={submitting} className="w-full gap-2 bg-primary hover:bg-primary/90 text-white font-semibold">
+                    <Button type="submit" disabled={submitting} className="w-full gap-2 bg-cta hover:bg-cta/90 text-white font-semibold">
                       {submitting ? <span className="flex items-center gap-2"><span className="size-4 border-2 border-white/30 border-t-white rounded-full animate-spin" /></span> : <><Send className="size-4" />Anfrage senden</>}
                     </Button>
                   </form>
@@ -733,14 +733,14 @@ export default function Home() {
       </main>
 
       {/* ==================== FOOTER ==================== */}
-      <footer className="bg-foreground text-white">
+      <footer className="bg-navy text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-16">
             {/* Col 1 */}
             <div>
-              <h3 className="text-xl font-bold mb-4 text-primary-foreground">{CLINIC}</h3>
+              <h3 className="text-xl font-bold mb-4 text-white">{CLINIC}</h3>
               <p className="text-white/60 text-sm leading-relaxed mb-4">Moderne Zahnmedizin in Darmstadt fuer gesunde Zaehne, aesthetische Ergebnisse und langfristige Zahngesundheit.</p>
-              <a href={PHONE_HREF} className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:underline">
+              <a href={PHONE_HREF} className="inline-flex items-center gap-2 text-cta font-semibold text-sm hover:underline">
                 <Phone className="size-4" />{PHONE}
               </a>
             </div>
