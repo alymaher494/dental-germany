@@ -1,0 +1,697 @@
+   679→          <div className="max-w-7xl mx-auto w-full">
+   680→            <div className="max-w-3xl">
+   681→              <motion.div initial="hidden" animate="visible" variants={stagger}>
+   682→                <motion.div variants={fadeUp}>
+   683→                  <Badge variant="secondary" className="mb-6 px-4 py-1.5 text-sm font-medium">
+   684→                    <CheckCircle2 className="size-4 mr-2 text-primary" />
+   685→                    Ihr Zahnarzt in Darmstadt
+   686→                  </Badge>
+   687→                </motion.div>
+   688→
+   689→                <motion.h1
+   690→                  variants={fadeUp}
+   691→                  className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground leading-tight"
+   692→                >
+   693→                  Ihr Lächeln verdient{' '}
+   694→                  <span className="text-primary">die beste Pflege</span>
+   695→                </motion.h1>
+   696→
+   697→                <motion.p
+   698→                  variants={fadeUp}
+   699→                  className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed"
+   700→                >
+   701→                  Willkommen in der {CLINIC}. Moderne Zahnmedizin, persönliche Betreuung und
+   702→                  ein mehrsprachiges Team — alles unter einem Dach in Darmstadt.
+   703→                </motion.p>
+   704→
+   705→                <motion.div
+   706→                  variants={fadeUp}
+   707→                  className="mt-8 flex flex-col sm:flex-row gap-4"
+   708→                >
+   709→                  <Button
+   710→                    size="lg"
+   711→                    className="gap-2 text-base px-8 cta-pulse"
+   712→                    onClick={() => scrollTo('#kontakt')}
+   713→                  >
+   714→                    Termin vereinbaren
+   715→                    <ChevronRight className="size-4" />
+   716→                  </Button>
+   717→                  <a href={PHONE_HREF}>
+   718→                    <Button size="lg" variant="outline" className="gap-2 text-base px-8">
+   719→                      <Phone className="size-4" />
+   720→                      Jetzt anrufen
+   721→                    </Button>
+   722→                  </a>
+   723→                </motion.div>
+   724→
+   725→                {/* Trust badges */}
+   726→                <motion.div
+   727→                  variants={fadeUp}
+   728→                  className="mt-12 flex flex-wrap gap-6 text-sm text-muted-foreground"
+   729→                >
+   730→                  <div className="flex items-center gap-2">
+   731→                    <Award className="size-5 text-primary" />
+   732→                    <span>Ueber 10 Jahre Erfahrung</span>
+   733→                  </div>
+   734→                  <div className="flex items-center gap-2">
+   735→                    <Monitor className="size-5 text-primary" />
+   736→                    <span>Modernste Technik</span>
+   737→                  </div>
+   738→                  <div className="flex items-center gap-2">
+   739→                    <Languages className="size-5 text-primary" />
+   740→                    <span>Mehrsprachiges Team</span>
+   741→                  </div>
+   742→                </motion.div>
+   743→              </motion.div>
+   744→            </div>
+   745→          </div>
+   746→        </section>
+   747→
+   748→        {/* ===== MAIN SERVICES ===== */}
+   749→        <Section id="leistungen">
+   750→          <SectionHeading>
+   751→            Unsere zahnmedizinischen Leistungen
+   752→          </SectionHeading>
+   753→          <motion.div
+   754→            initial="hidden"
+   755→            whileInView="visible"
+   756→            viewport={{ once: true, margin: '-80px' }}
+   757→            variants={stagger}
+   758→            className="grid md:grid-cols-3 gap-6 lg:gap-8"
+   759→          >
+   760→            {MAIN_SERVICES.map((service) => (
+   761→              <motion.div key={service.title} variants={fadeUp}>
+   762→                <Card className="group h-full border border-border/60 hover:border-primary/30 hover:shadow-lg transition-all duration-300">
+   763→                  <CardContent className="p-6 lg:p-8">
+   764→                    <div className="size-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+   765→                      <service.icon className="size-7 text-primary" />
+   766→                    </div>
+   767→                    <h3 className="text-xl font-semibold text-foreground mb-3">
+   768→                      {service.title}
+   769→                    </h3>
+   770→                    <p className="text-muted-foreground leading-relaxed mb-5">
+   771→                      {service.description}
+   772→                    </p>
+   773→                    <button
+   774→                      onClick={() => scrollTo('#kontakt')}
+   775→                      className="inline-flex items-center gap-1 text-primary font-medium text-sm hover:gap-2 transition-all"
+   776→                    >
+   777→                      Mehr erfahren
+   778→                      <ChevronRight className="size-4" />
+   779→                    </button>
+   780→                  </CardContent>
+   781→                </Card>
+   782→              </motion.div>
+   783→            ))}
+   784→          </motion.div>
+   785→        </Section>
+   786→
+   787→        {/* ===== WHY US ===== */}
+   788→        <Section id="ueber-uns" className="bg-muted/40">
+   789→          <SectionHeading>
+   790→            Ihr Partner für moderne Zahnmedizin in Darmstadt
+   791→          </SectionHeading>
+   792→
+   793→          <div className="grid lg:grid-cols-2 gap-12 items-start">
+   794→            <motion.div
+   795→              initial="hidden"
+   796→              whileInView="visible"
+   797→              viewport={{ once: true, margin: '-80px' }}
+   798→              variants={stagger}
+   799→              className="grid sm:grid-cols-2 gap-6"
+   800→            >
+   801→              {WHY_US_FEATURES.map((feat) => (
+   802→                <motion.div
+   803→                  key={feat.title}
+   804→                  variants={fadeUp}
+   805→                  className="flex gap-4"
+   806→                >
+   807→                  <div className="size-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+   808→                    <feat.icon className="size-5 text-primary" />
+   809→                  </div>
+   810→                  <div>
+   811→                    <h4 className="font-semibold text-foreground mb-1">{feat.title}</h4>
+   812→                    <p className="text-sm text-muted-foreground leading-relaxed">
+   813→                      {feat.description}
+   814→                    </p>
+   815→                  </div>
+   816→                </motion.div>
+   817→              ))}
+   818→            </motion.div>
+   819→
+   820→            <motion.div
+   821→              initial="hidden"
+   822→              whileInView="visible"
+   823→              viewport={{ once: true, margin: '-80px' }}
+   824→              variants={fadeUp}
+   825→              className="space-y-6"
+   826→            >
+   827→              <Card className="border-border/60">
+   828→                <CardContent className="p-6 lg:p-8 space-y-4">
+   829→                  <div className="flex items-center gap-3 mb-2">
+   830→                    <div className="size-12 rounded-full bg-primary/10 flex items-center justify-center">
+   831→                      <Award className="size-6 text-primary" />
+   832→                    </div>
+   833→                    <div>
+   834→                      <h3 className="font-semibold text-foreground">Dr. Faiz Eissa</h3>
+   835→                      <p className="text-sm text-muted-foreground">Zahnarzt / Implantologe</p>
+   836→                    </div>
+   837→                  </div>
+   838→                  <Separator />
+   839→                  <div className="space-y-3 text-sm text-muted-foreground">
+   840→                    <div className="flex items-start gap-2">
+   841→                      <CheckCircle2 className="size-4 text-primary shrink-0 mt-0.5" />
+   842→                      <span>Studium und Approbation an der LMU Muenchen</span>
+   843→                    </div>
+   844→                    <div className="flex items-start gap-2">
+   845→                      <CheckCircle2 className="size-4 text-primary shrink-0 mt-0.5" />
+   846→                      <span>Anerkennung der Diplomarbeit in der Schweiz Bern</span>
+   847→                    </div>
+   848→                    <div className="flex items-start gap-2">
+   849→                      <CheckCircle2 className="size-4 text-primary shrink-0 mt-0.5" />
+   850→                      <span>Bewilligung aus Kanton Luzern</span>
+   851→                    </div>
+   852→                    <div className="flex items-start gap-2">
+   853→                      <CheckCircle2 className="size-4 text-primary shrink-0 mt-0.5" />
+   854→                      <span>Curriculum der Implantologie in Mainz</span>
+   855→                    </div>
+   856→                  </div>
+   857→                </CardContent>
+   858→              </Card>
+   859→              <p className="text-muted-foreground leading-relaxed">
+   860→                Mit ueber 10 Jahren Erfahrung in der Zahnmedizin verbinde ich modernste
+   861→                Technik mit einfuehlsamer Patientenbetreuung. Mein Ziel ist es, jedem
+   862→                Patienten ein gesundes und schoenes Laecheln zu ermöglichen — in einer
+   863→                Atmosphaere des Vertrauens und des Wohlbefindens.
+   864→              </p>
+   865→            </motion.div>
+   866→          </div>
+   867→        </Section>
+   868→
+   869→        {/* ===== MORE SERVICES ===== */}
+   870→        <Section>
+   871→          <SectionHeading>
+   872→            Weitere zahnmedizinische Leistungen
+   873→          </SectionHeading>
+   874→          <motion.div
+   875→            initial="hidden"
+   876→            whileInView="visible"
+   877→            viewport={{ once: true, margin: '-80px' }}
+   878→            variants={stagger}
+   879→            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+   880→          >
+   881→            {MORE_SERVICES.map((service) => (
+   882→              <motion.div key={service.title} variants={fadeUp}>
+   883→                <Card className="h-full border border-border/60 hover:border-primary/30 hover:shadow-md transition-all duration-300">
+   884→                  <CardContent className="p-6">
+   885→                    <div className="size-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+   886→                      <service.icon className="size-6 text-primary" />
+   887→                    </div>
+   888→                    <h3 className="font-semibold text-foreground mb-2">{service.title}</h3>
+   889→                    <p className="text-sm text-muted-foreground leading-relaxed">
+   890→                      {service.description}
+   891→                    </p>
+   892→                  </CardContent>
+   893→                </Card>
+   894→              </motion.div>
+   895→            ))}
+   896→          </motion.div>
+   897→        </Section>
+   898→
+   899→        {/* ===== STATS ===== */}
+   900→        <section className="py-16 md:py-20 bg-primary/5">
+   901→          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+   902→            <motion.div
+   903→              initial="hidden"
+   904→              whileInView="visible"
+   905→              viewport={{ once: true, margin: '-80px' }}
+   906→              variants={stagger}
+   907→              className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12"
+   908→            >
+   909→              {STATS.map((stat) => (
+   910→                <motion.div
+   911→                  key={stat.label}
+   912→                  variants={fadeUp}
+   913→                  className="text-center"
+   914→                >
+   915→                  <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary">
+   916→                    <AnimatedCounter target={stat.value} suffix={stat.suffix} />
+   917→                  </div>
+   918→                  <p className="mt-2 text-sm sm:text-base text-muted-foreground font-medium">
+   919→                    {stat.label}
+   920→                  </p>
+   921→                </motion.div>
+   922→              ))}
+   923→            </motion.div>
+   924→          </div>
+   925→        </section>
+   926→
+   927→        {/* ===== TESTIMONIALS ===== */}
+   928→        <Section id="bewertungen">
+   929→          <SectionHeading>
+   930→            Was unsere Patienten sagen
+   931→          </SectionHeading>
+   932→          <motion.div
+   933→            initial="hidden"
+   934→            whileInView="visible"
+   935→            viewport={{ once: true, margin: '-80px' }}
+   936→            variants={stagger}
+   937→            className="grid md:grid-cols-3 gap-6 lg:gap-8"
+   938→          >
+   939→            {TESTIMONIALS.map((t) => (
+   940→              <motion.div key={t.name} variants={fadeUp}>
+   941→                <Card className="h-full border-border/60">
+   942→                  <CardContent className="p-6 lg:p-8 flex flex-col">
+   943→                    <Quote className="size-8 text-primary/20 mb-4" />
+   944→                    <p className="text-muted-foreground leading-relaxed flex-1 mb-6">
+   945→                      &ldquo;{t.text}&rdquo;
+   946→                    </p>
+   947→                    <Separator className="mb-4" />
+   948→                    <div className="flex items-center justify-between">
+   949→                      <div>
+   950→                        <p className="font-semibold text-foreground">{t.name}</p>
+   951→                        <p className="text-sm text-muted-foreground">{t.title}</p>
+   952→                      </div>
+   953→                      <div className="flex gap-0.5">
+   954→                        {Array.from({ length: 5 }).map((_, i) => (
+   955→                          <Star
+   956→                            key={i}
+   957→                            className="size-4 fill-amber-400 text-amber-400"
+   958→                          />
+   959→                        ))}
+   960→                      </div>
+   961→                    </div>
+   962→                  </CardContent>
+   963→                </Card>
+   964→              </motion.div>
+   965→            ))}
+   966→          </motion.div>
+   967→        </Section>
+   968→
+   969→        {/* ===== LANGUAGES ===== */}
+   970→        <Section id="sprachen" className="bg-muted/40">
+   971→          <SectionHeading>
+   972→            Wir sprechen Ihre Sprache
+   973→          </SectionHeading>
+   974→          <motion.div
+   975→            initial="hidden"
+   976→            whileInView="visible"
+   977→            viewport={{ once: true, margin: '-80px' }}
+   978→            variants={stagger}
+   979→            className="grid sm:grid-cols-3 gap-6 lg:gap-8 max-w-4xl mx-auto"
+   980→          >
+   981→            {LANGUAGES.map((lang) => (
+   982→              <motion.div key={lang.name} variants={fadeUp}>
+   983→                <Card className="h-full text-center border-border/60 hover:border-primary/30 hover:shadow-md transition-all duration-300">
+   984→                  <CardContent className="p-6 lg:p-8 flex flex-col items-center">
+   985→                    <div className="size-16 rounded-full bg-primary/10 flex items-center justify-center mb-5">
+   986→                      <Globe className="size-8 text-primary" />
+   987→                    </div>
+   988→                    <h3 className="text-xl font-semibold text-foreground mb-3">
+   989→                      {lang.name}
+   990→                    </h3>
+   991→                    <p className="text-sm text-muted-foreground leading-relaxed">
+   992→                      {lang.description}
+   993→                    </p>
+   994→                  </CardContent>
+   995→                </Card>
+   996→              </motion.div>
+   997→            ))}
+   998→          </motion.div>
+   999→        </Section>
+  1000→
+  1001→        {/* ===== CTA ===== */}
+  1002→        <section className="py-16 md:py-24 px-4 sm:px-6 bg-primary relative overflow-hidden">
+  1003→          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/90 -z-0" />
+  1004→          <div className="absolute top-0 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl -z-0" />
+  1005→          <div className="absolute bottom-0 right-1/4 w-48 h-48 bg-white/5 rounded-full blur-3xl -z-0" />
+  1006→
+  1007→          <div className="max-w-3xl mx-auto text-center relative z-10">
+  1008→            <motion.div
+  1009→              initial="hidden"
+  1010→              whileInView="visible"
+  1011→              viewport={{ once: true, margin: '-80px' }}
+  1012→              variants={stagger}
+  1013→            >
+  1014→              <motion.h2
+  1015→                variants={fadeUp}
+  1016→                className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary-foreground tracking-tight"
+  1017→              >
+  1018→                Termin vereinbaren
+  1019→              </motion.h2>
+  1020→              <motion.p
+  1021→                variants={fadeUp}
+  1022→                className="mt-4 text-lg text-primary-foreground/80 max-w-xl mx-auto"
+  1023→              >
+  1024→                Ihr Weg zu einem gesunden und strahlenden Laecheln beginnt hier.
+  1025→                Kontaktieren Sie uns noch heute.
+  1026→              </motion.p>
+  1027→              <motion.div
+  1028→                variants={fadeUp}
+  1029→                className="mt-8 flex flex-col sm:flex-row gap-4 justify-center"
+  1030→              >
+  1031→                <Button
+  1032→                  size="lg"
+  1033→                  variant="secondary"
+  1034→                  className="gap-2 text-base px-8"
+  1035→                  onClick={() => scrollTo('#kontakt')}
+  1036→                >
+  1037→                  Termin vereinbaren
+  1038→                  <ChevronRight className="size-4" />
+  1039→                </Button>
+  1040→                <a href={PHONE_HREF}>
+  1041→                  <Button
+  1042→                    size="lg"
+  1043→                    variant="outline"
+  1044→                    className="gap-2 text-base px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
+  1045→                  >
+  1046→                    <Phone className="size-4" />
+  1047→                    Jetzt anrufen
+  1048→                  </Button>
+  1049→                </a>
+  1050→              </motion.div>
+  1051→            </motion.div>
+  1052→          </div>
+  1053→        </section>
+  1054→
+  1055→        {/* ===== CONTACT ===== */}
+  1056→        <Section id="kontakt">
+  1057→          <SectionHeading>
+  1058→            Kontaktieren Sie uns
+  1059→          </SectionHeading>
+  1060→
+  1061→          <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
+  1062→            {/* Contact Info */}
+  1063→            <motion.div
+  1064→              initial="hidden"
+  1065→              whileInView="visible"
+  1066→              viewport={{ once: true, margin: '-80px' }}
+  1067→              variants={fadeUp}
+  1068→              className="lg:col-span-2 space-y-6"
+  1069→            >
+  1070→              <div className="space-y-6">
+  1071→                <div className="flex gap-4">
+  1072→                  <div className="size-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+  1073→                    <MapPin className="size-5 text-primary" />
+  1074→                  </div>
+  1075→                  <div>
+  1076→                    <h4 className="font-semibold text-foreground">Adresse</h4>
+  1077→                    <p className="text-sm text-muted-foreground">{ADDRESS}</p>
+  1078→                  </div>
+  1079→                </div>
+  1080→
+  1081→                <div className="flex gap-4">
+  1082→                  <div className="size-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+  1083→                    <Phone className="size-5 text-primary" />
+  1084→                  </div>
+  1085→                  <div>
+  1086→                    <h4 className="font-semibold text-foreground">Telefon</h4>
+  1087→                    <a
+  1088→                      href={PHONE_HREF}
+  1089→                      className="text-sm text-primary hover:underline"
+  1090→                    >
+  1091→                      {PHONE}
+  1092→                    </a>
+  1093→                  </div>
+  1094→                </div>
+  1095→
+  1096→                <div className="flex gap-4">
+  1097→                  <div className="size-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+  1098→                    <Mail className="size-5 text-primary" />
+  1099→                  </div>
+  1100→                  <div>
+  1101→                    <h4 className="font-semibold text-foreground">E-Mail</h4>
+  1102→                    <a
+  1103→                      href="mailto:info@dentalpraxis-luisenplatz.de"
+  1104→                      className="text-sm text-primary hover:underline"
+  1105→                    >
+  1106→                      info@dentalpraxis-luisenplatz.de
+  1107→                    </a>
+  1108→                  </div>
+  1109→                </div>
+  1110→
+  1111→                <div className="flex gap-4">
+  1112→                  <div className="size-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+  1113→                    <Clock className="size-5 text-primary" />
+  1114→                  </div>
+  1115→                  <div>
+  1116→                    <h4 className="font-semibold text-foreground">Sprechzeiten</h4>
+  1117→                    <div className="text-sm text-muted-foreground space-y-1">
+  1118→                      <p>Montag - Freitag: 08:00 - 18:00</p>
+  1119→                      <p>Samstag: nach Vereinbarung</p>
+  1120→                      <p>Sonntag: geschlossen</p>
+  1121→                    </div>
+  1122→                  </div>
+  1123→                </div>
+  1124→              </div>
+  1125→            </motion.div>
+  1126→
+  1127→            {/* Contact Form */}
+  1128→            <motion.div
+  1129→              initial="hidden"
+  1130→              whileInView="visible"
+  1131→              viewport={{ once: true, margin: '-80px' }}
+  1132→              variants={fadeUp}
+  1133→              className="lg:col-span-3"
+  1134→            >
+  1135→              <Card className="border-border/60">
+  1136→                <CardContent className="p-6 lg:p-8">
+  1137→                  <form onSubmit={handleFormSubmit} className="space-y-5">
+  1138→                    <div className="grid sm:grid-cols-2 gap-5">
+  1139→                      <div className="space-y-2">
+  1140→                        <Label htmlFor="name">Name *</Label>
+  1141→                        <Input
+  1142→                          id="name"
+  1143→                          placeholder="Ihr vollstaendiger Name"
+  1144→                          value={formData.name}
+  1145→                          onChange={(e) =>
+  1146→                            setFormData({ ...formData, name: e.target.value })
+  1147→                          }
+  1148→                          required
+  1149→                        />
+  1150→                      </div>
+  1151→                      <div className="space-y-2">
+  1152→                        <Label htmlFor="telefon">Telefon *</Label>
+  1153→                        <Input
+  1154→                          id="telefon"
+  1155→                          type="tel"
+  1156→                          placeholder="Ihre Telefonnummer"
+  1157→                          value={formData.telefon}
+  1158→                          onChange={(e) =>
+  1159→                            setFormData({ ...formData, telefon: e.target.value })
+  1160→                          }
+  1161→                          required
+  1162→                        />
+  1163→                      </div>
+  1164→                    </div>
+  1165→                    <div className="grid sm:grid-cols-2 gap-5">
+  1166→                      <div className="space-y-2">
+  1167→                        <Label htmlFor="email">E-Mail</Label>
+  1168→                        <Input
+  1169→                          id="email"
+  1170→                          type="email"
+  1171→                          placeholder="Ihre E-Mail-Adresse"
+  1172→                          value={formData.email}
+  1173→                          onChange={(e) =>
+  1174→                            setFormData({ ...formData, email: e.target.value })
+  1175→                          }
+  1176→                        />
+  1177→                      </div>
+  1178→                      <div className="space-y-2">
+  1179→                        <Label htmlFor="behandlung">Behandlungswunsch</Label>
+  1180→                        <Select
+  1181→                          value={formData.behandlung}
+  1182→                          onValueChange={(val) =>
+  1183→                            setFormData({ ...formData, behandlung: val })
+  1184→                          }
+  1185→                        >
+  1186→                          <SelectTrigger className="w-full">
+  1187→                            <SelectValue placeholder="Bitte waehlen..." />
+  1188→                          </SelectTrigger>
+  1189→                          <SelectContent>
+  1190→                            <SelectItem value="zahnreinigung">
+  1191→                              Professionelle Zahnreinigung
+  1192→                            </SelectItem>
+  1193→                            <SelectItem value="implantate">
+  1194→                              Zahnimplantate
+  1195→                            </SelectItem>
+  1196→                            <SelectItem value="bleaching">Bleaching</SelectItem>
+  1197→                            <SelectItem value="kronen-bruecken">
+  1198→                              Kronen & Bruecken
+  1199→                            </SelectItem>
+  1200→                            <SelectItem value="sonstiges">Sonstiges</SelectItem>
+  1201→                          </SelectContent>
+  1202→                        </Select>
+  1203→                      </div>
+  1204→                    </div>
+  1205→                    <div className="space-y-2">
+  1206→                      <Label htmlFor="nachricht">Nachricht</Label>
+  1207→                      <Textarea
+  1208→                        id="nachricht"
+  1209→                        placeholder="Beschreiben Sie kurz Ihr Anliegen..."
+  1210→                        rows={4}
+  1211→                        value={formData.nachricht}
+  1212→                        onChange={(e) =>
+  1213→                          setFormData({ ...formData, nachricht: e.target.value })
+  1214→                        }
+  1215→                      />
+  1216→                    </div>
+  1217→                    <Button
+  1218→                      type="submit"
+  1219→                      size="lg"
+  1220→                      className="w-full sm:w-auto gap-2 cta-pulse"
+  1221→                      disabled={submitting}
+  1222→                    >
+  1223→                      <Send className="size-4" />
+  1224→                      {submitting ? 'Wird gesendet...' : 'Anfrage senden'}
+  1225→                    </Button>
+  1226→                  </form>
+  1227→                </CardContent>
+  1228→              </Card>
+  1229→            </motion.div>
+  1230→          </div>
+  1231→        </Section>
+  1232→      </main>
+  1233→
+  1234→      {/* ===== FOOTER ===== */}
+  1235→      <footer className="bg-foreground text-background">
+  1236→        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+  1237→          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+  1238→            {/* Column 1: Clinic Info */}
+  1239→            <div>
+  1240→              <h3 className="font-bold text-lg mb-4">{CLINIC}</h3>
+  1241→              <p className="text-sm text-background/70 leading-relaxed mb-4">
+  1242→                Moderne Zahnmedizin in Darmstadt. Wir bieten Ihnen umfassende
+  1243→                zahnmedizinische Versorgung mit persönlicher Betreuung in
+  1244→                vertrauensvoller Atmosphaere.
+  1245→              </p>
+  1246→              <a href={PHONE_HREF} className="flex items-center gap-2 text-sm text-background/90 hover:text-primary-foreground transition-colors">
+  1247→                <Phone className="size-4" />
+  1248→                {PHONE}
+  1249→              </a>
+  1250→            </div>
+  1251→
+  1252→            {/* Column 2: Quick Links */}
+  1253→            <div>
+  1254→              <h4 className="font-semibold text-base mb-4">Schnellzugriff</h4>
+  1255→              <ul className="space-y-2.5 text-sm">
+  1256→                {NAV_LINKS.map((link) => (
+  1257→                  <li key={link.href}>
+  1258→                    <button
+  1259→                      onClick={() => scrollTo(link.href)}
+  1260→                      className="text-background/70 hover:text-primary-foreground transition-colors"
+  1261→                    >
+  1262→                      {link.label}
+  1263→                    </button>
+  1264→                  </li>
+  1265→                ))}
+  1266→                <li>
+  1267→                  <Separator className="my-3 bg-background/20" />
+  1268→                </li>
+  1269→                <li>
+  1270→                  <Dialog open={impressumOpen} onOpenChange={setImpressumOpen}>
+  1271→                    <DialogTrigger asChild>
+  1272→                      <button className="text-background/70 hover:text-primary-foreground transition-colors">
+  1273→                        Impressum
+  1274→                      </button>
+  1275→                    </DialogTrigger>
+  1276→                    <DialogContent className="sm:max-w-2xl max-h-[85vh]">
+  1277→                      <DialogHeader>
+  1278→                        <DialogTitle>Impressum</DialogTitle>
+  1279→                        <DialogDescription>
+  1280→                          Angaben gemaess Sect. 5 TMG
+  1281→                        </DialogDescription>
+  1282→                      </DialogHeader>
+  1283→                      <ScrollArea className="max-h-[65vh] pr-4">
+  1284→                        <ImpressumContent />
+  1285→                      </ScrollArea>
+  1286→                    </DialogContent>
+  1287→                  </Dialog>
+  1288→                </li>
+  1289→                <li>
+  1290→                  <Dialog open={datenschutzOpen} onOpenChange={setDatenschutzOpen}>
+  1291→                    <DialogTrigger asChild>
+  1292→                      <button className="text-background/70 hover:text-primary-foreground transition-colors">
+  1293→                        Datenschutzerklaerung
+  1294→                      </button>
+  1295→                    </DialogTrigger>
+  1296→                    <DialogContent className="sm:max-w-2xl max-h-[85vh]">
+  1297→                      <DialogHeader>
+  1298→                        <DialogTitle>Datenschutzerklaerung</DialogTitle>
+  1299→                        <DialogDescription>
+  1300→                          Informationen zum Datenschutz
+  1301→                        </DialogDescription>
+  1302→                      </DialogHeader>
+  1303→                      <ScrollArea className="max-h-[65vh] pr-4">
+  1304→                        <DatenschutzContent />
+  1305→                      </ScrollArea>
+  1306→                    </DialogContent>
+  1307→                  </Dialog>
+  1308→                </li>
+  1309→              </ul>
+  1310→            </div>
+  1311→
+  1312→            {/* Column 3: Contact Info */}
+  1313→            <div>
+  1314→              <h4 className="font-semibold text-base mb-4">Kontakt</h4>
+  1315→              <ul className="space-y-3 text-sm text-background/70">
+  1316→                <li className="flex items-start gap-2">
+  1317→                  <MapPin className="size-4 shrink-0 mt-0.5" />
+  1318→                  <span>{ADDRESS}</span>
+  1319→                </li>
+  1320→                <li className="flex items-center gap-2">
+  1321→                  <Phone className="size-4 shrink-0" />
+  1322→                  <a href={PHONE_HREF} className="hover:text-primary-foreground transition-colors">
+  1323→                    {PHONE}
+  1324→                  </a>
+  1325→                </li>
+  1326→                <li className="flex items-center gap-2">
+  1327→                  <Mail className="size-4 shrink-0" />
+  1328→                  <a
+  1329→                    href="mailto:info@dentalpraxis-luisenplatz.de"
+  1330→                    className="hover:text-primary-foreground transition-colors"
+  1331→                  >
+  1332→                    info@dentalpraxis-luisenplatz.de
+  1333→                  </a>
+  1334→                </li>
+  1335→                <li className="flex items-start gap-2">
+  1336→                  <Clock className="size-4 shrink-0 mt-0.5" />
+  1337→                  <div>
+  1338→                    <p>Mo - Fr: 08:00 - 18:00</p>
+  1339→                    <p>Sa: nach Vereinbarung</p>
+  1340→                  </div>
+  1341→                </li>
+  1342→              </ul>
+  1343→            </div>
+  1344→          </div>
+  1345→        </div>
+  1346→
+  1347→        {/* Bottom Bar */}
+  1348→        <div className="border-t border-background/10">
+  1349→          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-background/50">
+  1350→            <p>
+  1351→              &copy; {new Date().getFullYear()} {CLINIC}. Alle Rechte vorbehalten.
+  1352→            </p>
+  1353→            <div className="flex items-center gap-4">
+  1354→              <Dialog open={impressumOpen} onOpenChange={setImpressumOpen}>
+  1355→                <DialogTrigger asChild>
+  1356→                  <button className="hover:text-background/80 transition-colors">
+  1357→                    Impressum
+  1358→                  </button>
+  1359→                </DialogTrigger>
+  1360→              </Dialog>
+  1361→              <Dialog open={datenschutzOpen} onOpenChange={setDatenschutzOpen}>
+  1362→                <DialogTrigger asChild>
+  1363→                  <button className="hover:text-background/80 transition-colors">
+  1364→                    Datenschutzerklaerung
+  1365→                  </button>
+  1366→                </DialogTrigger>
+  1367→              </Dialog>
+  1368→            </div>
+  1369→          </div>
+  1370→        </div>
+  1371→      </footer>
+  1372→    </div>
+  1373→  );
+  1374→}
+  1375→
