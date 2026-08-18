@@ -30,6 +30,7 @@ import {
   Quote,
   X,
 } from 'lucide-react';
+import { GermanyFlag, SyriaFlag, KurdistanFlag } from '@/components/flag-icons';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -163,9 +164,9 @@ const TESTIMONIALS = [
 ];
 
 const LANGUAGES = [
-  { name: 'Deutsch', description: 'Fluessige Kommunikation in allen Belangen der zahnmedizinischen Beratung und Behandlung.', icon: Globe },
-  { name: 'Arabisch', description: 'Vollstaendige Beratung und Behandlung in arabischer Sprache fuer unsere arabischsprachigen Patienten.', icon: Globe },
-  { name: 'Kurdisch', description: 'Persoenliche Betreuung und Beratung auf Kurdisch, damit Sie sich voellig verstanden fuehlen.', icon: Globe },
+  { name: 'Deutsch', description: 'Fluessige Kommunikation in allen Belangen der zahnmedizinischen Beratung und Behandlung.', Flag: GermanyFlag },
+  { name: 'Arabisch', description: 'Vollstaendige Beratung und Behandlung in arabischer Sprache fuer unsere arabischsprachigen Patienten.', Flag: SyriaFlag },
+  { name: 'Kurdisch', description: 'Persoenliche Betreuung und Beratung auf Kurdisch, damit Sie sich voellig verstanden fuehlen.', Flag: KurdistanFlag },
 ];
 
 /* ============================================================ */
@@ -354,7 +355,7 @@ export default function Home() {
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
-              <button key={link.href} onClick={() => scrollTo(link.href)} className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors">
+              <button key={link.href} onClick={() => scrollTo(link.href)} className={`text-sm font-medium transition-colors ${scrolled ? 'text-foreground/70 hover:text-primary' : 'text-white/80 hover:text-white'}`}>
                 {link.label}
               </button>
             ))}
@@ -409,14 +410,13 @@ export default function Home() {
 
       <main className="flex-1">
         {/* ==================== HERO ==================== */}
-        <section className="relative min-h-screen flex items-center overflow-hidden">
-          {/* Background image with overlay */}
-          <div className="absolute inset-0 -z-10">
-            <Image src="/images/hero-clinic.png" alt="Moderne Zahnklinik Darmstadt" fill className="object-cover" priority />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#1E4697]/95 via-[#1E4697]/80 to-[#1E4697]/70" />
+        <section className="relative min-h-screen flex items-center overflow-hidden" style={{ background: 'linear-gradient(to right, rgba(30,70,151,0.85), rgba(30,70,151,0.70) 50%, rgba(30,70,151,0.50))' }}>
+          {/* Background image */}
+          <div className="absolute inset-0 z-0">
+            <Image src="/images/hero-clinic.png" alt="Moderne Zahnklinik Darmstadt" fill className="object-cover opacity-40" priority />
           </div>
 
-          <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 pt-20 pb-16">
+          <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 pt-20 pb-16 relative z-10">
             <div className="max-w-2xl">
               <motion.div initial="hidden" animate="visible" variants={stagger}>
                 <motion.div variants={fadeUp}>
@@ -531,12 +531,11 @@ export default function Home() {
         </Section>
 
         {/* ==================== STATS ==================== */}
-        <section className="relative py-16 md:py-20 overflow-hidden">
-          <div className="absolute inset-0 -z-10">
-            <Image src="/images/patients-happy.png" alt="Zufriedene Patienten" fill className="object-cover" />
-            <div className="absolute inset-0 bg-primary/92" />
+        <section className="relative py-16 md:py-20 overflow-hidden" style={{ background: 'linear-gradient(to right, rgba(30,70,151,0.80), rgba(30,70,151,0.75))' }}>
+          <div className="absolute inset-0 z-0">
+            <Image src="/images/patients-happy.jpg" alt="Zufriedene Patienten" fill className="object-cover opacity-30" />
           </div>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
               {STATS.map((stat) => (
                 <motion.div key={stat.label} variants={fadeUp} className="text-center">
@@ -609,8 +608,10 @@ export default function Home() {
             {LANGUAGES.map((lang) => (
               <motion.div key={lang.name} variants={fadeUp}>
                 <div className="text-center bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-shadow border border-primary/10 hover:border-primary/30">
-                  <div className="size-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <lang.icon className="size-8 text-primary" />
+                  <div className="mx-auto mb-4 flex justify-center">
+                    <div className="rounded-full overflow-hidden shadow-md border-2 border-primary/10" style={{ width: 64, height: 42 }}>
+                      <lang.Flag className="w-full h-full" />
+                    </div>
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-2">{lang.name}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{lang.description}</p>

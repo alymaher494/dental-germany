@@ -75,3 +75,25 @@ Complete single-page landing page with 11 sections:
 - No blue/indigo colors
 - Semantic HTML (main, header, nav, section, footer)
 - Smooth scroll navigation
+---
+Task ID: 1
+Agent: Main Agent
+Task: Fix language flags, hero image visibility, stats background image visibility
+
+Work Log:
+- Diagnosed patients-happy.png was actually a JPEG file (wrong extension), causing Next.js Image optimization to fail. Renamed to .jpg.
+- Created /src/components/flag-icons.tsx with inline SVG flag components: GermanyFlag, SyriaFlag, KurdistanFlag
+- Fixed initial hydration mismatch caused by Math.cos/sin in KurdistanFlag sun rays — pre-computed all 21 ray coordinates as static arrays
+- Replaced Globe icons in LANGUAGES data with flag components (Deutsch→GermanyFlag, Arabisch→SyriaFlag, Kurdisch→KurdistanFlag)
+- Fixed hero and stats sections: replaced negative z-index (-z-10) background approach with inline style backgrounds + z-0/z-10 layering to prevent backgrounds from rendering behind parent's white bg
+- Hero now uses inline rgba gradient background with image at opacity 0.40 behind content
+- Stats section uses inline rgba gradient background with image at opacity 0.30 behind content
+- Fixed nav link colors for transparent/scrolled states (white on hero, dark when scrolled)
+- Removed unused Globe import (still used elsewhere, kept)
+
+Stage Summary:
+- patients-happy.png → patients-happy.jpg (fixed MIME mismatch)
+- /src/components/flag-icons.tsx created (3 flag SVG components)
+- page.tsx updated: flags, hero background, stats background, nav colors
+- No console errors, lint passes clean
+- Verified via agent-browser + VLM: hero is blue, flags are visible
