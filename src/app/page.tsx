@@ -409,7 +409,7 @@ export default function Home() {
           {/* Background image with overlay */}
           <div className="absolute inset-0 -z-10">
             <Image src="/images/hero-clinic.png" alt="Moderne Zahnklinik Darmstadt" fill className="object-cover" priority />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/60" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#1E4697]/95 via-[#1E4697]/80 to-[#1E4697]/70" />
           </div>
 
           <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 pt-20 pb-16">
