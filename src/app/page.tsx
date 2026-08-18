@@ -347,8 +347,9 @@ export default function Home() {
       {/* ==================== NAVBAR ==================== */}
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 h-16 md:h-20">
-          <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className={`font-bold text-base sm:text-lg md:text-xl tracking-tight text-left ${scrolled ? 'text-primary' : 'text-primary'}`}>
-            {CLINIC}
+          <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-2.5">
+            <Image src="/images/logo.png" alt={CLINIC} width={44} height={44} className="rounded-lg" />
+            <span className={`font-bold text-sm sm:text-base md:text-lg tracking-tight text-left ${scrolled ? 'text-primary' : 'text-white'}`}>{CLINIC}</span>
           </button>
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-8">
@@ -380,7 +381,10 @@ export default function Home() {
               </SheetTrigger>
               <SheetContent side="right">
                 <SheetHeader>
-                  <SheetTitle className="text-primary">{CLINIC}</SheetTitle>
+                  <SheetTitle className="flex items-center gap-2 text-primary">
+                  <Image src="/images/logo.png" alt={CLINIC} width={32} height={32} className="rounded-md" />
+                  {CLINIC}
+                </SheetTitle>
                 </SheetHeader>
                 <div className="flex flex-col gap-2 mt-4">
                   {NAV_LINKS.map((link) => (
@@ -484,57 +488,46 @@ export default function Home() {
 
         {/* ==================== WHY US ==================== */}
         <Section id="ueber-uns" className="bg-gradient-to-br from-primary/8 via-primary/4 to-[#f0f4ff]">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left: Image */}
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} variants={scaleIn} className="relative">
-              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
-                <Image src="/images/doctor-portrait.png" alt="Dr. Faiz Eissa - Zahnarzt in Darmstadt" fill className="object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
-              </div>
-              {/* Floating card */}
-              <div className="absolute -bottom-6 -right-4 md:right-8 bg-white rounded-xl shadow-xl p-4 flex items-center gap-3">
-                <div className="size-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Award className="size-6 text-primary" />
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} variants={stagger}>
+            <motion.div variants={fadeUp}>
+              <Badge className="mb-4 px-3 py-1 bg-primary/10 text-primary border-primary/20 mx-auto block w-fit">Ueber uns</Badge>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight mb-4">
+                Ihr Partner fuer moderne Zahnmedizin in Darmstadt
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-10 max-w-3xl mx-auto">
+                Bei {CLINIC} verbinden wir moderne Technologie, individuelle Betreuung und langjaehrige Erfahrung, um Ihnen die bestmoegliche Behandlung in einer angenehmen Atmosphaere zu bieten.
+              </p>
+            </motion.div>
+
+            {/* Doctor card */}
+            <motion.div variants={fadeUp} className="max-w-2xl mx-auto mb-10">
+              <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 flex flex-col sm:flex-row items-center gap-6">
+                <div className="size-20 md:size-24 rounded-full bg-primary/10 flex items-center justify-center shrink-0 overflow-hidden">
+                  <Image src="/images/logo.png" alt={CLINIC} width={80} height={80} className="object-cover" />
                 </div>
-                <div>
-                  <p className="text-2xl font-bold text-primary">10+</p>
-                  <p className="text-sm text-muted-foreground">Jahre Erfahrung</p>
+                <div className="text-center sm:text-left">
+                  <h3 className="text-xl font-bold text-foreground mb-1">Dr. Faiz Eissa</h3>
+                  <p className="text-primary font-medium text-sm mb-2">Zahnarzt / Implantologe</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Studium und Approbation an der LMU Muenchen {'\u2022'} Anerkennung in Bern, Schweiz {'\u2022'} Curriculum der Implantologie in Mainz
+                  </p>
                 </div>
               </div>
             </motion.div>
 
-            {/* Right: Content */}
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} variants={stagger}>
-              <motion.div variants={fadeUp}>
-                <Badge className="mb-4 px-3 py-1 bg-primary/10 text-primary border-primary/20">Ueber uns</Badge>
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight mb-4">
-                  Ihr Partner fuer moderne Zahnmedizin in Darmstadt
-                </h2>
-                <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                  Bei {CLINIC} verbinden wir moderne Technologie, individuelle Betreuung und langjaehrige Erfahrung, um Ihnen die bestmoegliche Behandlung in einer angenehmen Atmosphaere zu bieten.
-                </p>
-              </motion.div>
-
-              <motion.h3 variants={fadeUp} className="text-xl font-bold text-foreground mb-2">Dr. Faiz Eissa</motion.h3>
-              <motion.p variants={fadeUp} className="text-muted-foreground mb-6 text-sm leading-relaxed">
-                Studium und Approbation an der LMU Muenchen {'•'} Anerkennung der Diplomarbeit in der Schweiz, Bern {'•'} Bewilligung aus Kanton Luzern {'•'} Curriculum der Implantologie in Mainz
-              </motion.p>
-
-              <motion.div variants={stagger} className="grid sm:grid-cols-2 gap-4">
-                {WHY_US_FEATURES.map((feat) => (
-                  <motion.div key={feat.title} variants={fadeUp} className="flex gap-3 items-start bg-white rounded-xl p-4 shadow-sm">
-                    <div className="size-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                      <feat.icon className="size-5 text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground text-sm mb-0.5">{feat.title}</h4>
-                      <p className="text-xs text-muted-foreground leading-relaxed">{feat.description}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </motion.div>
+            {/* Features grid */}
+            <motion.div variants={stagger} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
+              {WHY_US_FEATURES.map((feat) => (
+                <motion.div key={feat.title} variants={fadeUp} className="text-center bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="size-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                    <feat.icon className="size-7 text-primary" />
+                  </div>
+                  <h4 className="font-bold text-foreground mb-1.5">{feat.title}</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{feat.description}</p>
+                </motion.div>
+              ))}
             </motion.div>
-          </div>
+          </motion.div>
         </Section>
 
         {/* ==================== STATS ==================== */}
@@ -738,7 +731,10 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-16">
             {/* Col 1 */}
             <div>
-              <h3 className="text-xl font-bold mb-4 text-white">{CLINIC}</h3>
+              <div className="flex items-center gap-2.5 mb-4">
+                <Image src="/images/logo.png" alt={CLINIC} width={36} height={36} className="rounded-md" />
+                <h3 className="text-lg font-bold text-white">{CLINIC}</h3>
+              </div>
               <p className="text-white/60 text-sm leading-relaxed mb-4">Moderne Zahnmedizin in Darmstadt fuer gesunde Zaehne, aesthetische Ergebnisse und langfristige Zahngesundheit.</p>
               <a href={PHONE_HREF} className="inline-flex items-center gap-2 text-cta font-semibold text-sm hover:underline">
                 <Phone className="size-4" />{PHONE}
