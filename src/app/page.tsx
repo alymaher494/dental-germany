@@ -632,7 +632,10 @@ export default function Home() {
 
         {/* ==================== CTA SECTION ==================== */}
         <section className="relative py-20 md:py-28 overflow-hidden">
-          <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary via-primary to-[#2956B2]" />
+          <div className="absolute inset-0 -z-10">
+            <Image src="/images/hero-clinic.png" alt="" fill className="object-cover opacity-30" />
+          </div>
+          <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/90 via-primary/85 to-[#2956B2]/90" />
           {/* Decorative circles */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
           <div className="absolute bottom-0 left-0 w-72 h-72 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
