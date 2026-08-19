@@ -9,63 +9,112 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Dentalpraxis am Luisenplatz - Ihr Zahnarzt in Darmstadt",
+  metadataBase: new URL("https://dentalpraxis-luisenplatz.de"),
+  title: {
+    default: "Dentalpraxis am Luisenplatz - Zahnarzt Darmstadt | Dr. Faiz Eissa",
+    template: "%s | Dentalpraxis am Luisenplatz",
+  },
   description:
-    "Moderne Zahnmedizin in Darmstadt. Professionelle Zahnreinigung, Implantate, Bleaching, Kronen und Bruecken. Dr. Faiz Eissa und sein mehrsprachiges Team. Termin vereinbaren!",
+    "Moderne Zahnmedizin in Darmstadt am Luisenplatz. Dr. Faiz Eissa - Zahnarzt & Implantologe. Professionelle Zahnreinigung, Implantate, Bleaching, Kronen & Brücken. Mehrsprachiges Team (Deutsch, Arabisch, Kurdisch). Termin vereinbaren!",
   keywords: [
     "Zahnarzt Darmstadt",
     "Dentalpraxis Darmstadt",
-    "Zahnimplantate",
+    "Zahnarzt Luisenplatz",
+    "Zahnimplantate Darmstadt",
     "Professionelle Zahnreinigung",
     "Bleaching Darmstadt",
-    "Kronen Bruecken",
+    "Kronen Brücken",
     "Dr. Faiz Eissa",
-    "Luisenplatz Darmstadt",
-    "Zahnmedizin",
-    "Zahnersatz",
+    "Zahnmedizin Darmstadt",
+    "Implantologe Darmstadt",
+    "Zahnersatz Darmstadt",
+    "Zahnfleischbehandlung",
+    "Vorsorgeuntersuchungen",
+    "Mehrsprachiger Zahnarzt",
+    "Arabischsprachiger Zahnarzt Darmstadt",
+    "Kurdischsprachiger Zahnarzt Darmstadt",
   ],
-  authors: [{ name: "Dr. Faiz Eissa - Dentalpraxis am Luisenplatz" }],
+  authors: [{ name: "Dr. Faiz Eissa" }],
+  creator: "Dentalpraxis am Luisenplatz",
+  publisher: "Dentalpraxis am Luisenplatz",
+  formatDetection: {
+    email: true,
+    address: true,
+    telephone: true,
+  },
   icons: {
     icon: "/logo.svg",
+    apple: "/logo.svg",
+    shortcut: "/logo.svg",
   },
+  manifest: "/manifest.json",
   openGraph: {
-    title: "Dentalpraxis am Luisenplatz - Ihr Zahnarzt in Darmstadt",
-    description:
-      "Moderne Zahnmedizin in Darmstadt. Professionelle Zahnreinigung, Implantate, Bleaching und mehr. Dr. Faiz Eissa und sein mehrsprachiges Team.",
+    type: "website",
+    locale: "de_DE",
     url: "https://dentalpraxis-luisenplatz.de",
     siteName: "Dentalpraxis am Luisenplatz",
-    locale: "de_DE",
-    type: "website",
+    title: "Dentalpraxis am Luisenplatz - Zahnarzt Darmstadt | Dr. Faiz Eissa",
+    description:
+      "Moderne Zahnmedizin in Darmstadt am Luisenplatz. Dr. Faiz Eissa - Zahnarzt & Implantologe. Professionelle Zahnreinigung, Implantate, Bleaching, Kronen & Brücken. Mehrsprachiges Team (Deutsch, Arabisch, Kurdisch).",
+    images: [
+      {
+        url: "/images/hero-clinic.png",
+        width: 1200,
+        height: 630,
+        alt: "Dentalpraxis am Luisenplatz - Moderne Zahnmedizin in Darmstadt",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Dentalpraxis am Luisenplatz - Zahnarzt Darmstadt",
     description:
-      "Moderne Zahnmedizin in Darmstadt. Professionelle Zahnreinigung, Implantate, Bleaching und mehr.",
+      "Moderne Zahnmedizin in Darmstadt. Professionelle Zahnreinigung, Implantate, Bleaching und mehr. Dr. Faiz Eissa und sein mehrsprachiges Team.",
+    images: ["/images/hero-clinic.png"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   alternates: {
     canonical: "https://dentalpraxis-luisenplatz.de",
+    languages: {
+      de: "https://dentalpraxis-luisenplatz.de",
+      ar: "https://dentalpraxis-luisenplatz.de",
+      ku: "https://dentalpraxis-luisenplatz.de",
+    },
   },
+  verification: {
+    google: "google-site-verification-placeholder",
+  },
+  category: "health",
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "Dentist"],
+  "@type": ["Dentist", "LocalBusiness", "MedicalOrganization"],
+  "@id": "https://dentalpraxis-luisenplatz.de/#organization",
   name: "Dentalpraxis am Luisenplatz",
+  legalName: "Dentalpraxis am Luisenplatz",
   description:
-    "Moderne zahnmedizinische Praxis in Darmstadt. Dr. Faiz Eissa bietet Professionelle Zahnreinigung, Implantate, Bleaching, Kronen und Bruecken sowie weitere zahnmedizinische Leistungen an.",
+    "Moderne zahnmedizinische Praxis in Darmstadt am Luisenplatz. Dr. Faiz Eissa bietet Professionelle Zahnreinigung, Implantate, Bleaching, Kronen und Brücken sowie weitere zahnmedizinische Leistungen an.",
   url: "https://dentalpraxis-luisenplatz.de",
   telephone: "+4915213709772",
+  email: "info@dentalpraxis-luisenplatz.de",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Luisenplatz",
     addressLocality: "Darmstadt",
     postalCode: "64283",
     addressCountry: "DE",
+    addressRegion: "Hessen",
   },
   geo: {
     "@type": "GeoCoordinates",
@@ -79,17 +128,35 @@ const jsonLd = {
       opens: "08:00",
       closes: "18:00",
     },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Saturday",
+      opens: "09:00",
+      closes: "13:00",
+    },
   ],
+  areaServed: {
+    "@type": "City",
+    name: "Darmstadt",
+  },
   priceRange: "$$",
-  image: "https://dentalpraxis-luisenplatz.de/og-image.jpg",
+  image: "https://dentalpraxis-luisenplatz.de/images/hero-clinic.png",
   medicalSpecialty: "Dentistry",
-  availableLanguage: ["de", "ar", "ku"],
+  availableLanguage: ["Deutsch", "Arabisch", "Kurdisch"],
+  knowsLanguage: ["de", "ar", "ku"],
   founder: {
     "@type": "Person",
     name: "Dr. Faiz Eissa",
     jobTitle: "Zahnarzt",
-    knowsLanguage: ["de", "ar", "ku"],
+    worksFor: {
+      "@type": "Organization",
+      name: "Dentalpraxis am Luisenplatz",
+    },
   },
+  sameAs: [
+    "https://dentalpraxis-luisenplatz.de",
+  ],
+  hasMap: "https://maps.google.com/?q=Luisenplatz,+64283+Darmstadt",
 };
 
 export default function RootLayout({
