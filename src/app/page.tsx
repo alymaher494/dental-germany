@@ -1,8 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, type FormEvent } from 'react';
-import { motion, useInView, AnimatePresence } from 'framer-motion';
-import { toast } from 'sonner';
+import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
 import {
   Phone,
@@ -310,7 +309,7 @@ export default function Home() {
   const [impressumOpen, setImpressumOpen] = useState(false);
   const [datenschutzOpen, setDatenschutzOpen] = useState(false);
   const [formData, setFormData] = useState({ name: '', telefon: '', email: '', nachricht: '', behandlung: '' });
-  const [submitting, setSubmitting] = useState(false);
+  const [sent, setSent] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -324,23 +323,33 @@ export default function Home() {
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const handleFormSubmit = async (e: FormEvent) => {
+  const handleFormSubmit = (e: FormEvent) => {
     e.preventDefault();
-    setSubmitting(true);
-    try {
-      const res = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(formData) });
-      const data = await res.json();
-      if (data.success) {
-        toast.success('Anfrage gesendet', { description: 'Vielen Dank! Wir melden uns zeitnah bei Ihnen.' });
-        setFormData({ name: '', telefon: '', email: '', nachricht: '', behandlung: '' });
-      } else {
-        toast.error('Fehler', { description: data.message });
-      }
-    } catch {
-      toast.error('Fehler', { description: 'Bitte versuchen Sie es spaeter erneut.' });
-    } finally {
-      setSubmitting(false);
-    }
+
+    const behandlungMap: Record<string, string> = {
+      zahnreinigung: 'Professionelle Zahnreinigung',
+      implantate: 'Zahnimplantate',
+      bleaching: 'Bleaching',
+      kronen: 'Kronen & Bruecken',
+      zahnfleisch: 'Zahnfleischbehandlung',
+      sonstiges: 'Sonstiges',
+    };
+
+    const lines = [
+      'Neue Terminanfrage von der Website:',
+      `Name: ${formData.name}`,
+      `Telefon: ${formData.telefon}`,
+      formData.email ? `E-Mail: ${formData.email}` : undefined,
+      formData.behandlung ? `Behandlungswunsch: ${behandlungMap[formData.behandlung] || formData.behandlung}` : undefined,
+      formData.nachricht ? `Nachricht: ${formData.nachricht}` : undefined,
+    ].filter(Boolean);
+
+    const text = encodeURIComponent(lines.join('\n'));
+    const phone = '4915213709772';
+    const url = `https://wa.me/${phone}?text=${text}`;
+
+    setSent(true);
+    window.open(url, '_blank');
   };
 
   return (
@@ -441,7 +450,7 @@ export default function Home() {
                     <ChevronRight className="size-4" />
                   </Button>
                   <a href={PHONE_HREF}>
-                    <Button size="lg" variant="outline" className="gap-2 text-base px-8 border-white/50 text-white hover:bg-white/10 hover:text-white font-semibold">
+                    <Button size="lg" variant="outline" className="gap-2 text-base px-8 border-white/60 bg-white/10 text-white hover:bg-white hover:text-primary font-semibold backdrop-blur-sm transition-colors">
                       <Phone className="size-4" />Jetzt anrufen
                     </Button>
                   </a>
@@ -715,8 +724,8 @@ export default function Home() {
                       <Label htmlFor="nachricht">Nachricht</Label>
                       <Textarea id="nachricht" value={formData.nachricht} onChange={(e) => setFormData({ ...formData, nachricht: e.target.value })} placeholder="Ihre Nachricht..." rows={4} className="mt-1" />
                     </div>
-                    <Button type="submit" disabled={submitting} className="w-full gap-2 bg-cta hover:bg-cta/90 text-white font-semibold">
-                      {submitting ? <span className="flex items-center gap-2"><span className="size-4 border-2 border-white/30 border-t-white rounded-full animate-spin" /></span> : <><Send className="size-4" />Anfrage senden</>}
+                    <Button type="submit" disabled={sent} className="w-full gap-2 bg-cta hover:bg-cta/90 text-white font-semibold">
+                      {sent ? <><CheckCircle2 className="size-4" />WhatsApp wird geoeffnet</> : <><Send className="size-4" />Anfrage senden</>}
                     </Button>
                   </form>
                 </CardContent>
