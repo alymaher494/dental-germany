@@ -27,7 +27,6 @@ import {
   Send,
   CheckCircle2,
   Quote,
-  WhatsApp,
   X,
 } from 'lucide-react';
 import { GermanyFlag, SyriaFlag, KurdistanFlag } from '@/components/flag-icons';
@@ -58,7 +57,7 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValü,
+  SelectValue,
 } from '@/components/ui/select';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
@@ -797,7 +796,16 @@ export default function Home() {
           aria-label="WhatsApp Kontakt aufnehmen"
           className="group relative flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl hover:scale-110 hover:bg-[#128C7E] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 whatsapp-float"
         >
-          <WhatsApp className="size-7 group-hover:scale-110 transition-transform" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="size-7 group-hover:scale-110 transition-transform"
+            aria-hidden="true"
+          >
+            <path fillRule="evenodd" d="M1.5 4.5h21v15h-21v-15Zm2.009 2.955 L4.5 16.5h15l.991-9.045H3.509ZM5 7v10h14V7H5Z" clipRule="evenodd" opacity="0.3"/>
+            <path d="M13.41 12.051a1 1 0 0 1-1.004-.997L12.406 9.5a1 1 0 1 1 2 0v1.554a1 1 0 0 1-.996.997Zm3.586-3.543a1 1 0 0 1 1.408.287L16.5 9.6v6.4a1 1 0 0 1-1.994.055L14.5 13.5v-6.4l-1.5 1.5a1 1 0 0 1-1.354-1.487l2-1.833a1 1 0 0 1 1.354 0Z" />
+          </svg>
         </a>
       </div>
 
