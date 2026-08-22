@@ -27,6 +27,7 @@ import {
   Send,
   CheckCircle2,
   Quote,
+  WhatsApp,
   X,
 } from 'lucide-react';
 import { GermanyFlag, SyriaFlag, KurdistanFlag } from '@/components/flag-icons';
@@ -57,7 +58,7 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
+  SelectValü,
 } from '@/components/ui/select';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
@@ -71,7 +72,7 @@ const ADDRESS = 'Luisenplatz, 64283 Darmstadt, Deutschland';
 
 const NAV_LINKS = [
   { label: 'Leistungen', href: '#leistungen' },
-  { label: 'Ueber uns', href: '#ueber-uns' },
+  { label: 'Über uns', href: '#über-uns' },
   { label: 'Bewertungen', href: '#bewertungen' },
   { label: 'Sprachen', href: '#sprachen' },
   { label: 'Kontakt', href: '#kontakt' },
@@ -82,21 +83,21 @@ const MAIN_SERVICES = [
     icon: Sparkles,
     title: 'Professionelle Zahnreinigung',
     description:
-      'Gruendliche Reinigung Ihrer Zaehne mit modernsten Geraeten. Entfernung von Zahnstein und Verfaerbungen fuer ein strahlendes Laecheln.',
+      'Gründliche Reinigung Ihrer Zähne mit modernsten Geräten. Entfernung von Zahnstein und Verfärbungen für ein strahlendes Lächeln.',
     image: '/images/service-cleaning.png',
   },
   {
     icon: HeartPulse,
     title: 'Zahnimplantate',
     description:
-      'Hochwertige Implantatloesungen fuer einen festen und natuerlichen Zahnersatz. Modernste Technik fuer nachhaltige Ergebnisse.',
+      'Hochwertige Implantatlösungen für einen festen und natürlichen Zahnersatz. Modernste Technik für nachhaltige Ergebnisse.',
     image: '/images/service-implant.png',
   },
   {
     icon: Sun,
     title: 'Bleaching',
     description:
-      'Professionelle Zahnaufhellung fuer strahlend weisse Zaehne. Schonende Verfahren mit nachhaltigen Ergebnissen.',
+      'Professionelle Zahnaufhellung für strahlend weisse Zähne. Schonende Verfahren mit nachhaltigen Ergebnissen.',
     image: '/images/service-bleaching.png',
   },
 ];
@@ -106,42 +107,42 @@ const WHY_US_FEATURES = [
     icon: Monitor,
     title: 'Moderne Ausstattung',
     description:
-      'Neueste Diagnostik- und Behandlungstechnologien fuer Praezision und Komfort bei jeder Behandlung.',
+      'Neüste Diagnostik- und Behandlungstechnologien für Präzision und Komfort bei jeder Behandlung.',
   },
   {
     icon: Users,
-    title: 'Individuelle Betreuung',
+    title: 'Individülle Betreuung',
     description:
-      'Persoenliche Beratung und massgeschneiderte Behandlungsplaene, die auf Ihre Beduerfnisse abgestimmt sind.',
+      'Persönliche Beratung und massgeschneiderte Behandlungspläne, die auf Ihre Bedürfnisse abgestimmt sind.',
   },
   {
     icon: Award,
     title: 'Erfahrenes Team',
     description:
-      'Ueber 10 Jahre Berufserfahrung mit fundierter Ausbildung an der LMU Muenchen und Weiterbildung in der Implantologie.',
+      'Über 10 Jahre Berufserfahrung mit fundierter Ausbildung an der LMU München und Weiterbildung in der Implantologie.',
   },
   {
     icon: Languages,
     title: 'Mehrsprachiger Service',
     description:
-      'Wir sprechen Deutsch, Arabisch und Kurdisch — fuer eine verstaendliche Kommunikation ohne Sprachbarrieren.',
+      'Wir sprechen Deutsch, Arabisch und Kurdisch — für eine verständliche Kommunikation ohne Sprachbarrieren.',
   },
 ];
 
 const MORE_SERVICES = [
-  { icon: Crown, title: 'Kronen & Bruecken', description: 'Hochwertiger Zahnersatz fuer Funktion und Aesthetik.' },
-  { icon: Heart, title: 'Zahnfleischbehandlung', description: 'Professionelle Behandlung fuer gesundes Zahnfleisch.' },
-  { icon: Gem, title: 'Aesthetische Fuellungen', description: 'Natuerliche und langlebige Loesungen fuer beschaedigte Zaehne.' },
-  { icon: ShieldCheck, title: 'Vorsorgeuntersuchungen', description: 'Regelmaessige Kontrollen fuer langfristige Zahngesundheit.' },
-  { icon: Smile, title: 'Zahnersatz', description: 'Individuelle Loesungen fuer ein sicheres Laecheln.' },
-  { icon: Star, title: 'Aesthetische Zahnmedizin', description: 'Moderne Verfahren fuer schoene und harmonische Zaehne.' },
+  { icon: Crown, title: 'Kronen & Brücken', description: 'Hochwertiger Zahnersatz für Funktion und Ästhetik.' },
+  { icon: Heart, title: 'Zahnfleischbehandlung', description: 'Professionelle Behandlung für gesundes Zahnfleisch.' },
+  { icon: Gem, title: 'Ästhetische Füllungen', description: 'Natürliche und langlebige Lösungen für beschädigte Zähne.' },
+  { icon: ShieldCheck, title: 'Vorsorgeuntersuchungen', description: 'Regelmässige Kontrollen für langfristige Zahngesundheit.' },
+  { icon: Smile, title: 'Zahnersatz', description: 'Individülle Lösungen für ein sicheres Lächeln.' },
+  { icon: Star, title: 'Ästhetische Zahnmedizin', description: 'Moderne Verfahren für schöne und harmonische Zähne.' },
 ];
 
 const STATS = [
-  { value: 10, suffix: '+', label: 'Jahre Erfahrung' },
-  { value: 5000, suffix: '+', label: 'Zufriedene Patienten' },
-  { value: 2000, suffix: '+', label: 'Erfolgreiche Implantate' },
-  { value: 98, suffix: '%', label: 'Patientenzufriedenheit' },
+  { valü: 10, suffix: '+', label: 'Jahre Erfahrung' },
+  { valü: 5000, suffix: '+', label: 'Zufriedene Patienten' },
+  { valü: 2000, suffix: '+', label: 'Erfolgreiche Implantate' },
+  { valü: 98, suffix: '%', label: 'Patientenzufriedenheit' },
 ];
 
 const TESTIMONIALS = [
@@ -151,21 +152,21 @@ const TESTIMONIALS = [
     text: 'Ich bin seit Jahren Patientin bei Dr. Eissa und bin sehr zufrieden. Die Praxis ist modern, das Team ist freundlich und die Behandlungen sind schmerzfrei.',
   },
   {
-    name: 'Michael R.',
+    name: 'Michäl R.',
     title: 'Patient seit 2021',
-    text: 'Moderne Praxis, kurze Wartezeiten und hervorragende Ergebnisse. Die Beratung war ausfuehrlich und verstaendlich. Sehr empfehlenswert.',
+    text: 'Moderne Praxis, kurze Wartezeiten und hervorragende Ergebnisse. Die Beratung war ausführlich und verständlich. Sehr empfehlenswert.',
   },
   {
     name: 'Anna W.',
     title: 'Patientin seit 2020',
-    text: 'Mein Implantat wurde perfekt gesetzt und sieht aus wie ein eigener Zahn. Die Nachsorge ist ebenfalls erstklassig. Ich kann die Praxis nur waermstens empfehlen.',
+    text: 'Mein Implantat wurde perfekt gesetzt und sieht aus wie ein eigener Zahn. Die Nachsorge ist ebenfalls erstklassig. Ich kann die Praxis nur wärmstens empfehlen.',
   },
 ];
 
 const LANGUAGES = [
-  { name: 'Deutsch', description: 'Fluessige Kommunikation in allen Belangen der zahnmedizinischen Beratung und Behandlung.', Flag: GermanyFlag },
-  { name: 'Arabisch', description: 'Vollstaendige Beratung und Behandlung in arabischer Sprache fuer unsere arabischsprachigen Patienten.', Flag: SyriaFlag },
-  { name: 'Kurdisch', description: 'Persoenliche Betreuung und Beratung auf Kurdisch, damit Sie sich voellig verstanden fuehlen.', Flag: KurdistanFlag },
+  { name: 'Deutsch', description: 'Flüssige Kommunikation in allen Belangen der zahnmedizinischen Beratung und Behandlung.', Flag: GermanyFlag },
+  { name: 'Arabisch', description: 'Vollständige Beratung und Behandlung in arabischer Sprache für unsere arabischsprachigen Patienten.', Flag: SyriaFlag },
+  { name: 'Kurdisch', description: 'Persönliche Betreuung und Beratung auf Kurdisch, damit Sie sich völlig verstanden fühlen.', Flag: KurdistanFlag },
 ];
 
 /* ============================================================ */
@@ -246,27 +247,27 @@ function SectionHeading({ children, subtitle, light = false }: { children: React
 function ImpressumContent() {
   return (
     <div className="prose prose-sm max-w-none text-foreground space-y-4">
-      <h3 className="text-lg font-semibold">Angaben gemaess Sect. 5 TMG</h3>
+      <h3 className="text-lg font-semibold">Angaben gemäss Sect. 5 TMG</h3>
       <p><strong>Dr. Faiz Eissa</strong><br />{CLINIC}<br />Luisenplatz<br />64283 Darmstadt<br />Deutschland</p>
       <h3 className="text-lg font-semibold">Kontakt</h3>
       <p>Telefon: {PHONE}<br />E-Mail: info@dentalpraxis-luisenplatz.de</p>
-      <h3 className="text-lg font-semibold">Steuernummer</h3>
-      <p>Steuernummer: 0781461675</p>
+      <h3 className="text-lg font-semibold">Steürnummer</h3>
+      <p>Steürnummer: 0781461675</p>
       <h3 className="text-lg font-semibold">Berufsbezeichnung und berufsrechtliche Regelungen</h3>
-      <p>Berufsbezeichnung: Zahnarzt<br />Zustaendige Kammer: Zaehneaerztekammer Hessen<br />Verliehen in: Deutschland<br />Es gelten folgende berufsrechtliche Regelungen:<br />- Zahnheilkundegesetz (ZHG)<br />- Gebuehrenordnung fuer Zahnarzte (GOZ)</p>
+      <p>Berufsbezeichnung: Zahnarzt<br />Zuständige Kammer: Zähneärztekammer Hessen<br />Verliehen in: Deutschland<br />Es gelten folgende berufsrechtliche Regelungen:<br />- Zahnheilkundegesetz (ZHG)<br />- Gebührenordnung für Zahnarzte (GOZ)</p>
       <h3 className="text-lg font-semibold">Ausbildung</h3>
-      <p>Studium und Approbation an der LMU Muenchen<br />Anerkennung der Diplomarbeit in der Schweiz Bern<br />Bewilligung aus Kanton Luzern<br />Curriculum der Implantologie in Mainz</p>
-      <h3 className="text-lg font-semibold">Verantwortlich fuer den Inhalt nach Sect. 55 Abs. 2 RStV</h3>
+      <p>Studium und Approbation an der LMU München<br />Anerkennung der Diplomarbeit in der Schweiz Bern<br />Bewilligung aus Kanton Luzern<br />Curriculum der Implantologie in Mainz</p>
+      <h3 className="text-lg font-semibold">Verantwortlich für den Inhalt nach Sect. 55 Abs. 2 RStV</h3>
       <p>Dr. Faiz Eissa<br />Luisenplatz, 64283 Darmstadt</p>
       <h3 className="text-lg font-semibold">Haftungsausschluss</h3>
-      <h4 className="text-base font-semibold">Haftung fuer Inhalte</h4>
-      <p>Die Inhalte unserer Seiten wurden mit groesster Sorgfalt erstellt. Fuer die Richtigkeit, Vollstaendigkeit und Aktualitaet der Inhalte koennen wir jedoch keine Gewaehr uebernehmen. Als Diensteanbieter sind wir gemaess Sect. 7 Abs.1 TMG fuer eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.</p>
-      <h4 className="text-base font-semibold">Haftung fuer Links</h4>
-      <p>Unser Angebot enthaelt Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb koennen wir fuer diese fremden Inhalte auch keine Gewaehr uebernehmen.</p>
+      <h4 className="text-base font-semibold">Haftung für Inhalte</h4>
+      <p>Die Inhalte unserer Seiten wurden mit grösster Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäss Sect. 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.</p>
+      <h4 className="text-base font-semibold">Haftung für Links</h4>
+      <p>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.</p>
       <h3 className="text-lg font-semibold">Urheberrecht</h3>
       <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht.</p>
       <h3 className="text-lg font-semibold">Streitschlichtung</h3>
-      <p>Die Europaeische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit. Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+      <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit. Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
     </div>
   );
 }
@@ -275,25 +276,25 @@ function DatenschutzContent() {
   return (
     <div className="prose prose-sm max-w-none text-foreground space-y-4">
       <h3 className="text-lg font-semibold">1. Datenschutz auf einen Blick</h3>
-      <p>Die folgenden Hinweise geben einen einfachen Ueberblick darueber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen.</p>
+      <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen.</p>
       <h3 className="text-lg font-semibold">2. Verantwortliche Stelle</h3>
       <p>Dr. Faiz Eissa<br />{CLINIC}<br />Luisenplatz<br />64283 Darmstadt<br />Telefon: {PHONE}<br />E-Mail: info@dentalpraxis-luisenplatz.de</p>
       <h3 className="text-lg font-semibold">3. Hosting</h3>
       <p>Diese Website wird bei einem professionellen Hosting-Provider gehostet. Die auf dieser Website verarbeiteten Daten werden auf den Servern des Hosters gespeichert.</p>
-      <h3 className="text-lg font-semibold">4. SSL-Verschluesselung</h3>
-      <p>Diese Seite nutzt aus Sicherheitsgruenden und zum Schutz der Uebertragung vertraulicher Inhalte eine SSL-Verschluesselung.</p>
+      <h3 className="text-lg font-semibold">4. SSL-Verschlüsselung</h3>
+      <p>Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL-Verschlüsselung.</p>
       <h3 className="text-lg font-semibold">5. Kontaktformular</h3>
-      <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und fuer den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+      <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
       <h3 className="text-lg font-semibold">6. Server-Log-Dateien</h3>
       <p>Der Provider der Seiten erhebt und speichert automatisch Informationen in Server-Log-Dateien: Browsertyp, Betriebssystem, Referrer URL, Hostname, Uhrzeit der Serveranfrage, IP-Adresse.</p>
       <h3 className="text-lg font-semibold">7. Google Analytics</h3>
       <p><em>Hinweis: Google Analytics ist derzeit nicht aktiv auf dieser Website.</em></p>
       <h3 className="text-lg font-semibold">8. Ihre Rechte</h3>
-      <p>Sie haben jederzeit das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16 DSGVO), Loeschung (Art. 17 DSGVO), Einschraenkung der Verarbeitung (Art. 18 DSGVO), Widerspruch (Art. 21 DSGVO) und Datenuebertragbarkeit (Art. 20 DSGVO).</p>
+      <p>Sie haben jederzeit das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16 DSGVO), Löschung (Art. 17 DSGVO), Einschränkung der Verarbeitung (Art. 18 DSGVO), Widerspruch (Art. 21 DSGVO) und Datenübertragbarkeit (Art. 20 DSGVO).</p>
       <h3 className="text-lg font-semibold">9. Cookies</h3>
       <p>Diese Website verwendet keine Tracking-Cookies. Es werden lediglich technisch notwendige Cookies eingesetzt.</p>
-      <h3 className="text-lg font-semibold">10. Aufbewahrungsdauer</h3>
-      <p>Personenbezogene Daten werden geloescht, sobald der Zweck der Speicherung entfaellt.</p>
+      <h3 className="text-lg font-semibold">10. Aufbewahrungsdaür</h3>
+      <p>Personenbezogene Daten werden gelöscht, sobald der Zweck der Speicherung entfällt.</p>
       <h3 className="text-lg font-semibold">11. Fragen zum Datenschutz</h3>
       <p>Telefon: {PHONE}<br />E-Mail: info@dentalpraxis-luisenplatz.de</p>
     </div>
@@ -319,7 +320,7 @@ export default function Home() {
 
   const scrollTo = (href: string) => {
     setMobileOpen(false);
-    const el = document.querySelector(href);
+    const el = document.qürySelector(href);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -330,13 +331,13 @@ export default function Home() {
       zahnreinigung: 'Professionelle Zahnreinigung',
       implantate: 'Zahnimplantate',
       bleaching: 'Bleaching',
-      kronen: 'Kronen & Bruecken',
+      kronen: 'Kronen & Brücken',
       zahnfleisch: 'Zahnfleischbehandlung',
       sonstiges: 'Sonstiges',
     };
 
     const lines = [
-      'Neue Terminanfrage von der Website:',
+      'Neü Terminanfrage von der Website:',
       `Name: ${formData.name}`,
       `Telefon: ${formData.telefon}`,
       formData.email ? `E-Mail: ${formData.email}` : undefined,
@@ -436,12 +437,12 @@ export default function Home() {
                 </motion.div>
 
                 <motion.h1 variants={fadeUp} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
-                  Ihr Laecheln verdient{' '}
+                  Ihr Lächeln verdient{' '}
                   <span className="text-white/90">die beste Pflege</span>
                 </motion.h1>
 
                 <motion.p variants={fadeUp} className="mt-6 text-lg sm:text-xl text-white/85 max-w-xl leading-relaxed">
-                  Willkommen in der {CLINIC}. Moderne Zahnmedizin, persoenliche Betreuung und ein mehrsprachiges Team — alles unter einem Dach in Darmstadt.
+                  Willkommen in der {CLINIC}. Moderne Zahnmedizin, persönliche Betreuung und ein mehrsprachiges Team — alles unter einem Dach in Darmstadt.
                 </motion.p>
 
                 <motion.div variants={fadeUp} className="mt-8 flex flex-col sm:flex-row gap-4">
@@ -457,7 +458,7 @@ export default function Home() {
                 </motion.div>
 
                 <motion.div variants={fadeUp} className="mt-12 flex flex-wrap gap-6 text-sm text-white/80">
-                  <div className="flex items-center gap-2"><Award className="size-5" /><span>Ueber 10 Jahre Erfahrung</span></div>
+                  <div className="flex items-center gap-2"><Award className="size-5" /><span>Über 10 Jahre Erfahrung</span></div>
                   <div className="flex items-center gap-2"><Monitor className="size-5" /><span>Modernste Technik</span></div>
                   <div className="flex items-center gap-2"><Languages className="size-5" /><span>Mehrsprachiges Team</span></div>
                 </motion.div>
@@ -496,15 +497,15 @@ export default function Home() {
         </Section>
 
         {/* ==================== WHY US ==================== */}
-        <Section id="ueber-uns" className="bg-gradient-to-br from-primary/8 via-primary/4 to-[#f0f4ff]">
+        <Section id="über-uns" className="bg-gradient-to-br from-primary/8 via-primary/4 to-[#f0f4ff]">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} variants={stagger}>
             <motion.div variants={fadeUp}>
-              <Badge className="mb-4 px-3 py-1 bg-primary/10 text-primary border-primary/20 mx-auto block w-fit">Ueber uns</Badge>
+              <Badge className="mb-4 px-3 py-1 bg-primary/10 text-primary border-primary/20 mx-auto block w-fit">Über uns</Badge>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight mb-4">
-                Ihr Partner fuer moderne Zahnmedizin in Darmstadt
+                Ihr Partner für moderne Zahnmedizin in Darmstadt
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-10 max-w-3xl mx-auto">
-                Bei {CLINIC} verbinden wir moderne Technologie, individuelle Betreuung und langjaehrige Erfahrung, um Ihnen die bestmoegliche Behandlung in einer angenehmen Atmosphaere zu bieten.
+                Bei {CLINIC} verbinden wir moderne Technologie, individülle Betreuung und langjährige Erfahrung, um Ihnen die bestmögliche Behandlung in einer angenehmen Atmosphäre zu bieten.
               </p>
             </motion.div>
 
@@ -518,7 +519,7 @@ export default function Home() {
                   <h3 className="text-xl font-bold text-foreground mb-1">Dr. Faiz Eissa</h3>
                   <p className="text-primary font-medium text-sm mb-2">Zahnarzt / Implantologe</p>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Studium und Approbation an der LMU Muenchen {'\u2022'} Anerkennung in Bern, Schweiz {'\u2022'} Curriculum der Implantologie in Mainz
+                    Studium und Approbation an der LMU München {'\u2022'} Anerkennung in Bern, Schweiz {'\u2022'} Curriculum der Implantologie in Mainz
                   </p>
                 </div>
               </div>
@@ -549,7 +550,7 @@ export default function Home() {
               {STATS.map((stat) => (
                 <motion.div key={stat.label} variants={fadeUp} className="text-center">
                   <p className="text-4xl md:text-5xl font-bold text-white mb-2">
-                    <AnimatedCounter target={stat.value} suffix={stat.suffix} />
+                    <AnimatedCounter target={stat.valü} suffix={stat.suffix} />
                   </p>
                   <p className="text-white/80 text-sm md:text-base font-medium">{stat.label}</p>
                 </motion.div>
@@ -612,7 +613,7 @@ export default function Home() {
         {/* ==================== LANGUAGES ==================== */}
         <Section id="sprachen" className="bg-gradient-to-b from-primary/6 to-transparent">
           <SectionHeading>Wir sprechen Ihre Sprache</SectionHeading>
-          <p className="text-center text-muted-foreground max-w-2xl mx-auto -mt-8 mb-12">Fuer eine angenehme und verstaendliche Kommunikation bieten wir Beratungen in mehreren Sprachen an.</p>
+          <p className="text-center text-muted-foreground max-w-2xl mx-auto -mt-8 mb-12">Für eine angenehme und verständliche Kommunikation bieten wir Beratungen in mehreren Sprachen an.</p>
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} variants={stagger} className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {LANGUAGES.map((lang) => (
               <motion.div key={lang.name} variants={fadeUp}>
@@ -644,7 +645,7 @@ export default function Home() {
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
               <motion.div variants={fadeUp}>
                 <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-4">Termin vereinbaren</h2>
-                <p className="text-white/85 text-lg md:text-xl mb-10">Ihr Weg zu einem gesunden und strahlenden Laecheln beginnt hier. Vereinbaren Sie noch heute Ihren Termin.</p>
+                <p className="text-white/85 text-lg md:text-xl mb-10">Ihr Weg zu einem gesunden und strahlenden Lächeln beginnt hier. Vereinbaren Sie noch heute Ihren Termin.</p>
               </motion.div>
               <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="gap-2 text-base px-10 bg-cta text-white hover:bg-cta/90 font-semibold shadow-lg" onClick={() => scrollTo('#kontakt')}>
@@ -668,7 +669,7 @@ export default function Home() {
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} variants={stagger} className="space-y-6">
               <motion.div variants={fadeUp}>
                 <h3 className="text-2xl font-bold text-foreground mb-2">{CLINIC}</h3>
-                <p className="text-muted-foreground leading-relaxed">Vereinbaren Sie noch heute Ihren Termin und lassen Sie sich von unserem erfahrenen Team persoenlich beraten.</p>
+                <p className="text-muted-foreground leading-relaxed">Vereinbaren Sie noch heute Ihren Termin und lassen Sie sich von unserem erfahrenen Team persönlich beraten.</p>
               </motion.div>
 
               <motion.div variants={fadeUp} className="space-y-4">
@@ -699,36 +700,36 @@ export default function Home() {
                   <form onSubmit={handleFormSubmit} className="space-y-4">
                     <div>
                       <Label htmlFor="name">Name *</Label>
-                      <Input id="name" required value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} placeholder="Ihr Name" className="mt-1" />
+                      <Input id="name" required valü={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.valü })} placeholder="Ihr Name" className="mt-1" />
                     </div>
                     <div>
                       <Label htmlFor="telefon">Telefon *</Label>
-                      <Input id="telefon" type="tel" required value={formData.telefon} onChange={(e) => setFormData({ ...formData, telefon: e.target.value })} placeholder="Ihre Telefonnummer" className="mt-1" />
+                      <Input id="telefon" type="tel" required valü={formData.telefon} onChange={(e) => setFormData({ ...formData, telefon: e.target.valü })} placeholder="Ihre Telefonnummer" className="mt-1" />
                     </div>
                     <div>
                       <Label htmlFor="email">E-Mail</Label>
-                      <Input id="email" type="email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} placeholder="Ihre E-Mail-Adresse" className="mt-1" />
+                      <Input id="email" type="email" valü={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.valü })} placeholder="Ihre E-Mail-Adresse" className="mt-1" />
                     </div>
                     <div>
                       <Label htmlFor="behandlung">Behandlungswunsch</Label>
-                      <Select value={formData.behandlung} onValueChange={(v) => setFormData({ ...formData, behandlung: v })}>
-                        <SelectTrigger className="mt-1"><SelectValue placeholder="Bitte waehlen..." /></SelectTrigger>
+                      <Select valü={formData.behandlung} onValüChange={(v) => setFormData({ ...formData, behandlung: v })}>
+                        <SelectTrigger className="mt-1"><SelectValü placeholder="Bitte wählen..." /></SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="zahnreinigung">Professionelle Zahnreinigung</SelectItem>
-                          <SelectItem value="implantate">Zahnimplantate</SelectItem>
-                          <SelectItem value="bleaching">Bleaching</SelectItem>
-                          <SelectItem value="kronen">Kronen & Bruecken</SelectItem>
-                          <SelectItem value="zahnfleisch">Zahnfleischbehandlung</SelectItem>
-                          <SelectItem value="sonstiges">Sonstiges</SelectItem>
+                          <SelectItem valü="zahnreinigung">Professionelle Zahnreinigung</SelectItem>
+                          <SelectItem valü="implantate">Zahnimplantate</SelectItem>
+                          <SelectItem valü="bleaching">Bleaching</SelectItem>
+                          <SelectItem valü="kronen">Kronen & Brücken</SelectItem>
+                          <SelectItem valü="zahnfleisch">Zahnfleischbehandlung</SelectItem>
+                          <SelectItem valü="sonstiges">Sonstiges</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
                     <div>
                       <Label htmlFor="nachricht">Nachricht</Label>
-                      <Textarea id="nachricht" value={formData.nachricht} onChange={(e) => setFormData({ ...formData, nachricht: e.target.value })} placeholder="Ihre Nachricht..." rows={4} className="mt-1" />
+                      <Textarea id="nachricht" valü={formData.nachricht} onChange={(e) => setFormData({ ...formData, nachricht: e.target.valü })} placeholder="Ihre Nachricht..." rows={4} className="mt-1" />
                     </div>
                     <Button type="submit" disabled={sent} className="w-full gap-2 bg-cta hover:bg-cta/90 text-white font-semibold">
-                      {sent ? <><CheckCircle2 className="size-4" />WhatsApp wird geoeffnet</> : <><Send className="size-4" />Anfrage senden</>}
+                      {sent ? <><CheckCircle2 className="size-4" />WhatsApp wird geöffnet</> : <><Send className="size-4" />Anfrage senden</>}
                     </Button>
                   </form>
                 </CardContent>
@@ -748,7 +749,7 @@ export default function Home() {
                 <Image src="/images/logo.png" alt={CLINIC} width={36} height={36} className="rounded-md" />
                 <h3 className="text-lg font-bold text-white">{CLINIC}</h3>
               </div>
-              <p className="text-white/60 text-sm leading-relaxed mb-4">Moderne Zahnmedizin in Darmstadt fuer gesunde Zaehne, aesthetische Ergebnisse und langfristige Zahngesundheit.</p>
+              <p className="text-white/60 text-sm leading-relaxed mb-4">Moderne Zahnmedizin in Darmstadt für gesunde Zähne, ästhetische Ergebnisse und langfristige Zahngesundheit.</p>
               <a href={PHONE_HREF} className="inline-flex items-center gap-2 text-cta font-semibold text-sm hover:underline">
                 <Phone className="size-4" />{PHONE}
               </a>
@@ -761,7 +762,7 @@ export default function Home() {
                   <li key={link.href}><button onClick={() => scrollTo(link.href)} className="text-sm text-white/60 hover:text-white transition-colors">{link.label}</button></li>
                 ))}
                 <li><button onClick={() => setImpressumOpen(true)} className="text-sm text-white/60 hover:text-white transition-colors">Impressum</button></li>
-                <li><button onClick={() => setDatenschutzOpen(true)} className="text-sm text-white/60 hover:text-white transition-colors">Datenschutzerklaerung</button></li>
+                <li><button onClick={() => setDatenschutzOpen(true)} className="text-sm text-white/60 hover:text-white transition-colors">Datenschutzerklärung</button></li>
               </ul>
             </div>
             {/* Col 3 */}
@@ -781,18 +782,31 @@ export default function Home() {
             <p>&copy; {new Date().getFullYear()} {CLINIC}. Alle Rechte vorbehalten.</p>
             <div className="flex gap-4">
               <button onClick={() => setImpressumOpen(true)} className="hover:text-white/60 transition-colors">Impressum</button>
-              <button onClick={() => setDatenschutzOpen(true)} className="hover:text-white/60 transition-colors">Datenschutzerklaerung</button>
+              <button onClick={() => setDatenschutzOpen(true)} className="hover:text-white/60 transition-colors">Datenschutzerklärung</button>
             </div>
           </div>
         </div>
       </footer>
+
+      {/* ==================== WHATSAPP FLOATING BUTTON ==================== */}
+      <div className="fixed bottom-6 right-6 z-50">
+        <a
+          href={`https://wa.me/${PHONE.replace(/\D/g, '')}?text=Hallo%20Dentalpraxis%20am%20Luisenplatz%2C%20ich%20moechte%20einen%20Termin%20vereinbaren.%0A%0AMeine%20Daten%3A%0AName%3A%20%0ATelefon%3A%20${encodeURIComponent(PHONE)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="WhatsApp Kontakt aufnehmen"
+          className="group relative flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl hover:scale-110 hover:bg-[#128C7E] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 whatsapp-float"
+        >
+          <WhatsApp className="size-7 group-hover:scale-110 transition-transform" />
+        </a>
+      </div>
 
       {/* ==================== LEGAL MODALS ==================== */}
       <Dialog open={impressumOpen} onOpenChange={setImpressumOpen}>
         <DialogContent className="max-w-2xl max-h-[85vh]">
           <DialogHeader>
             <DialogTitle>Impressum</DialogTitle>
-            <DialogDescription>Angaben gemaess Sect. 5 TMG</DialogDescription>
+            <DialogDescription>Angaben gemäss Sect. 5 TMG</DialogDescription>
           </DialogHeader>
           <ScrollArea className="max-h-[60vh] pr-4"><ImpressumContent /></ScrollArea>
         </DialogContent>
@@ -801,7 +815,7 @@ export default function Home() {
       <Dialog open={datenschutzOpen} onOpenChange={setDatenschutzOpen}>
         <DialogContent className="max-w-2xl max-h-[85vh]">
           <DialogHeader>
-            <DialogTitle>Datenschutzerklaerung</DialogTitle>
+            <DialogTitle>Datenschutzerklärung</DialogTitle>
             <DialogDescription>Informationen zum Datenschutz</DialogDescription>
           </DialogHeader>
           <ScrollArea className="max-h-[60vh] pr-4"><DatenschutzContent /></ScrollArea>

@@ -126,3 +126,23 @@ html {
 .cta-pulse {
   animation: cta-pulse 2.5s ease-in-out infinite;
 }
+
+/* WhatsApp floating button pulse */
+@keyframes whatsapp-pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 oklch(0.7 0.2 140 / 0.5);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 12px oklch(0.7 0.2 140 / 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 oklch(0.7 0.2 140 / 0);
+  }
+}
+
+.whatsapp-float {
+  animation: whatsapp-pulse 3s ease-in-out infinite;
+}
