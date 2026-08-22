@@ -138,10 +138,10 @@ const MORE_SERVICES = [
 ];
 
 const STATS = [
-  { valü: 10, suffix: '+', label: 'Jahre Erfahrung' },
-  { valü: 5000, suffix: '+', label: 'Zufriedene Patienten' },
-  { valü: 2000, suffix: '+', label: 'Erfolgreiche Implantate' },
-  { valü: 98, suffix: '%', label: 'Patientenzufriedenheit' },
+  { value: 10, suffix: '+', label: 'Jahre Erfahrung' },
+  { value: 5000, suffix: '+', label: 'Zufriedene Patienten' },
+  { value: 2000, suffix: '+', label: 'Erfolgreiche Implantate' },
+  { value: 98, suffix: '%', label: 'Patientenzufriedenheit' },
 ];
 
 const TESTIMONIALS = [
@@ -319,7 +319,7 @@ export default function Home() {
 
   const scrollTo = (href: string) => {
     setMobileOpen(false);
-    const el = document.qürySelector(href);
+    const el = document.querySelector(href);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -549,7 +549,7 @@ export default function Home() {
               {STATS.map((stat) => (
                 <motion.div key={stat.label} variants={fadeUp} className="text-center">
                   <p className="text-4xl md:text-5xl font-bold text-white mb-2">
-                    <AnimatedCounter target={stat.valü} suffix={stat.suffix} />
+                    <AnimatedCounter target={stat.value} suffix={stat.suffix} />
                   </p>
                   <p className="text-white/80 text-sm md:text-base font-medium">{stat.label}</p>
                 </motion.div>
@@ -699,33 +699,33 @@ export default function Home() {
                   <form onSubmit={handleFormSubmit} className="space-y-4">
                     <div>
                       <Label htmlFor="name">Name *</Label>
-                      <Input id="name" required valü={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.valü })} placeholder="Ihr Name" className="mt-1" />
+                      <Input id="name" required value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} placeholder="Ihr Name" className="mt-1" />
                     </div>
                     <div>
                       <Label htmlFor="telefon">Telefon *</Label>
-                      <Input id="telefon" type="tel" required valü={formData.telefon} onChange={(e) => setFormData({ ...formData, telefon: e.target.valü })} placeholder="Ihre Telefonnummer" className="mt-1" />
+                      <Input id="telefon" type="tel" required value={formData.telefon} onChange={(e) => setFormData({ ...formData, telefon: e.target.value })} placeholder="Ihre Telefonnummer" className="mt-1" />
                     </div>
                     <div>
                       <Label htmlFor="email">E-Mail</Label>
-                      <Input id="email" type="email" valü={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.valü })} placeholder="Ihre E-Mail-Adresse" className="mt-1" />
+                      <Input id="email" type="email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} placeholder="Ihre E-Mail-Adresse" className="mt-1" />
                     </div>
                     <div>
                       <Label htmlFor="behandlung">Behandlungswunsch</Label>
-                      <Select valü={formData.behandlung} onValüChange={(v) => setFormData({ ...formData, behandlung: v })}>
-                        <SelectTrigger className="mt-1"><SelectValü placeholder="Bitte wählen..." /></SelectTrigger>
+                      <Select value={formData.behandlung} onValueChange={(v) => setFormData({ ...formData, behandlung: v })}>
+                        <SelectTrigger className="mt-1"><SelectValue placeholder="Bitte wählen..." /></SelectTrigger>
                         <SelectContent>
-                          <SelectItem valü="zahnreinigung">Professionelle Zahnreinigung</SelectItem>
-                          <SelectItem valü="implantate">Zahnimplantate</SelectItem>
-                          <SelectItem valü="bleaching">Bleaching</SelectItem>
-                          <SelectItem valü="kronen">Kronen & Brücken</SelectItem>
-                          <SelectItem valü="zahnfleisch">Zahnfleischbehandlung</SelectItem>
-                          <SelectItem valü="sonstiges">Sonstiges</SelectItem>
+                          <SelectItem value="zahnreinigung">Professionelle Zahnreinigung</SelectItem>
+                          <SelectItem value="implantate">Zahnimplantate</SelectItem>
+                          <SelectItem value="bleaching">Bleaching</SelectItem>
+                          <SelectItem value="kronen">Kronen & Brücken</SelectItem>
+                          <SelectItem value="zahnfleisch">Zahnfleischbehandlung</SelectItem>
+                          <SelectItem value="sonstiges">Sonstiges</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
                     <div>
                       <Label htmlFor="nachricht">Nachricht</Label>
-                      <Textarea id="nachricht" valü={formData.nachricht} onChange={(e) => setFormData({ ...formData, nachricht: e.target.valü })} placeholder="Ihre Nachricht..." rows={4} className="mt-1" />
+                      <Textarea id="nachricht" value={formData.nachricht} onChange={(e) => setFormData({ ...formData, nachricht: e.target.value })} placeholder="Ihre Nachricht..." rows={4} className="mt-1" />
                     </div>
                     <Button type="submit" disabled={sent} className="w-full gap-2 bg-cta hover:bg-cta/90 text-white font-semibold">
                       {sent ? <><CheckCircle2 className="size-4" />WhatsApp wird geöffnet</> : <><Send className="size-4" />Anfrage senden</>}
