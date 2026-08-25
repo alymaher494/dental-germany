@@ -434,7 +434,6 @@ export default function Home() {
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 h-16 md:h-20">
           <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-2.5">
             <Image src="/images/logo.png" alt={CLINIC} width={44} height={44} className="rounded-lg" />
-            <span className={`font-bold text-sm sm:text-base md:text-lg tracking-tight text-left ${scrolled ? 'text-primary' : 'text-white'}`}>{CLINIC}</span>
           </button>
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-8">
@@ -468,7 +467,6 @@ export default function Home() {
                 <SheetHeader>
                   <SheetTitle className="flex items-center gap-2 text-primary">
                   <Image src="/images/logo.png" alt={CLINIC} width={32} height={32} className="rounded-md" />
-                  {CLINIC}
                 </SheetTitle>
                 </SheetHeader>
                 <div className="flex flex-col gap-2 mt-4">
@@ -726,7 +724,7 @@ export default function Home() {
                   Termin vereinbaren <ChevronRight className="size-4" />
                 </Button>
                 <a href={PHONE_HREF}>
-                  <Button size="lg" variant="outline" className="gap-2 text-base px-10 border-white/50 text-white hover:bg-white/10 hover:text-white font-semibold">
+                  <Button size="lg" variant="outline" className="gap-2 text-base px-10 border-white/50 bg-transparent text-white hover:bg-white/10 hover:text-white font-semibold">
                     <Phone className="size-4" />Jetzt anrufen
                   </Button>
                 </a>
@@ -797,7 +795,6 @@ export default function Home() {
             <div>
               <div className="flex items-center gap-2.5 mb-4">
                 <Image src="/images/logo.png" alt={CLINIC} width={36} height={36} className="rounded-md" />
-                <h3 className="text-lg font-bold text-white">{CLINIC}</h3>
               </div>
               <p className="text-white/60 text-sm leading-relaxed mb-4">Moderne Zahnmedizin in Darmstadt für gesunde Zähne, ästhetische Ergebnisse und langfristige Zahngesundheit.</p>
               <a href={PHONE_HREF} className="inline-flex items-center gap-2 text-cta font-semibold text-sm hover:underline">
