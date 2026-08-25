@@ -3,9 +3,9 @@
   "short_name": "Dentalpraxis",
   "icons": [
     {
-      "src": "/logo.svg",
+      "src": "/images/Dentalpraxis-Luisenplatz-transparent.png",
       "sizes": "any",
-      "type": "image/svg+xml",
+      "type": "image/png",
       "purpose": "any"
     }
   ],

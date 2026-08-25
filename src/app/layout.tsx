@@ -43,9 +43,9 @@ export const metadata: Metadata = {
     telephone: true,
   },
   icons: {
-    icon: "/images/logo.png",
-    apple: "/images/logo.png",
-    shortcut: "/images/logo.png",
+    icon: "/images/Dentalpraxis-Luisenplatz-transparent.png",
+    apple: "/images/Dentalpraxis-Luisenplatz-transparent.png",
+    shortcut: "/images/Dentalpraxis-Luisenplatz-transparent.png",
   },
   manifest: "/manifest.json",
   openGraph: {

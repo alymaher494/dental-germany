@@ -433,7 +433,7 @@ export default function Home() {
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 h-16 md:h-20">
           <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-2.5">
-            <Image src="/images/Dentalpraxis-Luisenplatz-transparent.png" alt={CLINIC} width={56} height={56} className="rounded-lg" />
+            <Image src="/images/Dentalpraxis-Luisenplatz-transparent.png" alt={CLINIC} width={64} height={64} className="rounded-lg" />
           </button>
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-8">
@@ -466,7 +466,7 @@ export default function Home() {
               <SheetContent side="right">
                 <SheetHeader>
                   <SheetTitle className="flex items-center gap-2 text-primary">
-                  <Image src="/images/Dentalpraxis-Luisenplatz-transparent.png" alt={CLINIC} width={40} height={40} className="rounded-md" />
+                <Image src="/images/Dentalpraxis-Luisenplatz-transparent.png" alt={CLINIC} width={64} height={64} className="rounded-md" />
                 </SheetTitle>
                 </SheetHeader>
                 <div className="flex flex-col gap-2 mt-4">
