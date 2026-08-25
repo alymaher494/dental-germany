@@ -29,7 +29,7 @@ import {
   Quote,
   X,
 } from 'lucide-react';
-import { GermanyFlag, SyriaFlag, KurdistanFlag } from '@/components/flag-icons';
+import { GermanyFlag, UAEFlag, KurdistanFlag } from '@/components/flag-icons';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -164,7 +164,7 @@ const TESTIMONIALS = [
 
 const LANGUAGES = [
   { name: 'Deutsch', description: 'Verständliche Kommunikation in allen Bereichen der zahnmedizinischen Beratung und Behandlung.', Flag: GermanyFlag },
-  { name: 'Arabisch', description: 'Vollständige Beratung und Behandlung in arabischer Sprache für unsere arabischsprachigen Patienten.', Flag: SyriaFlag },
+  { name: 'Arabisch', description: 'Vollständige Beratung und Behandlung in arabischer Sprache für unsere arabischsprachigen Patienten.', Flag: UAEFlag },
   { name: 'Kurdisch', description: 'Persönliche Betreuung und Beratung auf Kurdisch, damit Sie sich völlig verstanden fühlen.', Flag: KurdistanFlag },
 ];
 
@@ -433,7 +433,7 @@ export default function Home() {
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 h-16 md:h-20">
           <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-2.5">
-            <Image src="/images/logo.png" alt={CLINIC} width={44} height={44} className="rounded-lg" />
+            <Image src="/images/Dentalpraxis-Luisenplatz-transparent.png" alt={CLINIC} width={56} height={56} className="rounded-lg" />
           </button>
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-8">
@@ -466,7 +466,7 @@ export default function Home() {
               <SheetContent side="right">
                 <SheetHeader>
                   <SheetTitle className="flex items-center gap-2 text-primary">
-                  <Image src="/images/logo.png" alt={CLINIC} width={32} height={32} className="rounded-md" />
+                  <Image src="/images/Dentalpraxis-Luisenplatz-transparent.png" alt={CLINIC} width={40} height={40} className="rounded-md" />
                 </SheetTitle>
                 </SheetHeader>
                 <div className="flex flex-col gap-2 mt-4">
@@ -794,7 +794,7 @@ export default function Home() {
             {/* Col 1 */}
             <div>
               <div className="flex items-center gap-2.5 mb-4">
-                <Image src="/images/logo.png" alt={CLINIC} width={36} height={36} className="rounded-md" />
+                <Image src="/images/Dentalpraxis-Luisenplatz-transparent.png" alt={CLINIC} width={48} height={48} className="rounded-md" />
               </div>
               <p className="text-white/60 text-sm leading-relaxed mb-4">Moderne Zahnmedizin in Darmstadt für gesunde Zähne, ästhetische Ergebnisse und langfristige Zahngesundheit.</p>
               <a href={PHONE_HREF} className="inline-flex items-center gap-2 text-cta font-semibold text-sm hover:underline">

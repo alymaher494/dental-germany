@@ -13,16 +13,13 @@ export function GermanyFlag({ className = 'size-8' }: { className?: string }) {
   );
 }
 
-export function SyriaFlag({ className = 'size-8' }: { className?: string }) {
+export function UAEFlag({ className = 'size-8' }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
-      <rect width="36" height="8" fill="#CE1126" />
+      <rect width="36" height="8" fill="#00732F" />
       <rect y="8" width="36" height="8" fill="#FFFFFF" />
       <rect y="16" width="36" height="8" fill="#000000" />
-      <g fill="#007A3D">
-        <polygon points="12,12 12.58,13.76 14.47,13.76 12.94,14.85 13.53,16.61 12,15.52 10.47,16.61 11.06,14.85 9.53,13.76 11.42,13.76" />
-        <polygon points="24,12 24.58,13.76 26.47,13.76 24.94,14.85 25.53,16.61 24,15.52 22.47,16.61 23.06,14.85 21.53,13.76 23.42,13.76" />
-      </g>
+      <rect width="9" height="24" fill="#FF0000" />
     </svg>
   );
 }
