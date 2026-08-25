@@ -707,15 +707,15 @@ export default function Home() {
 
         {/* ==================== CTA SECTION ==================== */}
         <section className="relative py-20 md:py-28 overflow-hidden">
-          <div className="absolute inset-0 -z-10">
+          <div className="absolute inset-0 z-0 bg-gradient-to-br from-primary/90 via-primary/85 to-[#2956B2]/90" />
+          <div className="absolute inset-0 z-0">
             <Image src="/images/hero-clinic.png" alt="" fill className="object-cover opacity-30" />
           </div>
-          <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/90 via-primary/85 to-[#2956B2]/90" />
           {/* Decorative circles */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
           <div className="absolute bottom-0 left-0 w-72 h-72 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
 
-          <div className="max-w-3xl mx-auto text-center px-4 sm:px-6 relative">
+          <div className="max-w-3xl mx-auto text-center px-4 sm:px-6 relative z-10">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
               <motion.div variants={fadeUp}>
                 <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-4">Termin vereinbaren</h2>
