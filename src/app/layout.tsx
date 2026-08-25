@@ -110,7 +110,7 @@ const jsonLd = {
   email: "info@dentalpraxis-luisenplatz.de",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Luisenplatz",
+    streetAddress: "Luisenplatz 4",
     addressLocality: "Darmstadt",
     postalCode: "64283",
     addressCountry: "DE",
@@ -156,7 +156,7 @@ const jsonLd = {
   sameAs: [
     "https://dentalpraxis-luisenplatz.de",
   ],
-  hasMap: "https://maps.google.com/?q=Luisenplatz,+64283+Darmstadt",
+  hasMap: "https://maps.google.com/?q=Luisenplatz+4,+64283+Darmstadt",
 };
 
 export default function RootLayout({

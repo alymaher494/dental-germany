@@ -67,7 +67,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 const PHONE = '+49 1521 3709772';
 const PHONE_HREF = 'tel:+4915213709772';
 const CLINIC = 'Dentalpraxis am Luisenplatz';
-const ADDRESS = 'Luisenplatz, 64283 Darmstadt, Deutschland';
+const ADDRESS = 'Luisenplatz 4, 64283 Darmstadt, Deutschland';
 
 const NAV_LINKS = [
   { label: 'Leistungen', href: '#leistungen' },
@@ -96,7 +96,7 @@ const MAIN_SERVICES = [
     icon: Sun,
     title: 'Bleaching',
     description:
-      'Professionelle Zahnaufhellung für strahlend weisse Zähne. Schonende Verfahren mit nachhaltigen Ergebnissen.',
+      'Professionelle Zahnaufhellung für strahlend weiße Zähne. Schonende Verfahren mit nachhaltigen Ergebnissen.',
     image: '/images/service-bleaching.png',
   },
 ];
@@ -106,13 +106,13 @@ const WHY_US_FEATURES = [
     icon: Monitor,
     title: 'Moderne Ausstattung',
     description:
-      'Neüste Diagnostik- und Behandlungstechnologien für Präzision und Komfort bei jeder Behandlung.',
+      'Neueste Diagnostik- und Behandlungstechnologien für Präzision und Komfort bei jeder Behandlung.',
   },
   {
     icon: Users,
-    title: 'Individülle Betreuung',
+    title: 'Individuelle Betreuung',
     description:
-      'Persönliche Beratung und massgeschneiderte Behandlungspläne, die auf Ihre Bedürfnisse abgestimmt sind.',
+      'Persönliche Beratung und maßgeschneiderte Behandlungspläne, die auf Ihre Bedürfnisse abgestimmt sind.',
   },
   {
     icon: Award,
@@ -132,8 +132,8 @@ const MORE_SERVICES = [
   { icon: Crown, title: 'Kronen & Brücken', description: 'Hochwertiger Zahnersatz für Funktion und Ästhetik.' },
   { icon: Heart, title: 'Zahnfleischbehandlung', description: 'Professionelle Behandlung für gesundes Zahnfleisch.' },
   { icon: Gem, title: 'Ästhetische Füllungen', description: 'Natürliche und langlebige Lösungen für beschädigte Zähne.' },
-  { icon: ShieldCheck, title: 'Vorsorgeuntersuchungen', description: 'Regelmässige Kontrollen für langfristige Zahngesundheit.' },
-  { icon: Smile, title: 'Zahnersatz', description: 'Individülle Lösungen für ein sicheres Lächeln.' },
+  { icon: ShieldCheck, title: 'Vorsorgeuntersuchungen', description: 'Regelmäßige Kontrollen für langfristige Zahngesundheit.' },
+  { icon: Smile, title: 'Zahnersatz', description: 'Individuelle Lösungen für ein sicheres Lächeln.' },
   { icon: Star, title: 'Ästhetische Zahnmedizin', description: 'Moderne Verfahren für schöne und harmonische Zähne.' },
 ];
 
@@ -151,7 +151,7 @@ const TESTIMONIALS = [
     text: 'Ich bin seit Jahren Patientin bei Dr. Eissa und bin sehr zufrieden. Die Praxis ist modern, das Team ist freundlich und die Behandlungen sind schmerzfrei.',
   },
   {
-    name: 'Michäl R.',
+    name: 'Michael R.',
     title: 'Patient seit 2021',
     text: 'Moderne Praxis, kurze Wartezeiten und hervorragende Ergebnisse. Die Beratung war ausführlich und verständlich. Sehr empfehlenswert.',
   },
@@ -163,7 +163,7 @@ const TESTIMONIALS = [
 ];
 
 const LANGUAGES = [
-  { name: 'Deutsch', description: 'Flüssige Kommunikation in allen Belangen der zahnmedizinischen Beratung und Behandlung.', Flag: GermanyFlag },
+  { name: 'Deutsch', description: 'Verständliche Kommunikation in allen Bereichen der zahnmedizinischen Beratung und Behandlung.', Flag: GermanyFlag },
   { name: 'Arabisch', description: 'Vollständige Beratung und Behandlung in arabischer Sprache für unsere arabischsprachigen Patienten.', Flag: SyriaFlag },
   { name: 'Kurdisch', description: 'Persönliche Betreuung und Beratung auf Kurdisch, damit Sie sich völlig verstanden fühlen.', Flag: KurdistanFlag },
 ];
@@ -246,27 +246,27 @@ function SectionHeading({ children, subtitle, light = false }: { children: React
 function ImpressumContent() {
   return (
     <div className="prose prose-sm max-w-none text-foreground space-y-4">
-      <h3 className="text-lg font-semibold">Angaben gemäss Sect. 5 TMG</h3>
-      <p><strong>Dr. Faiz Eissa</strong><br />{CLINIC}<br />Luisenplatz<br />64283 Darmstadt<br />Deutschland</p>
+      <h3 className="text-lg font-semibold">Angaben gemäß § 5 DDG</h3>
+      <p><strong>Dr. Faiz Eissa</strong><br />{CLINIC}<br />Luisenplatz 4<br />64283 Darmstadt<br />Deutschland</p>
       <h3 className="text-lg font-semibold">Kontakt</h3>
       <p>Telefon: {PHONE}<br />E-Mail: info@dentalpraxis-luisenplatz.de</p>
-      <h3 className="text-lg font-semibold">Steürnummer</h3>
-      <p>Steürnummer: 0781461675</p>
+      <h3 className="text-lg font-semibold">Steuernummer</h3>
+      <p>Steuernummer: 0781461675</p>
       <h3 className="text-lg font-semibold">Berufsbezeichnung und berufsrechtliche Regelungen</h3>
-      <p>Berufsbezeichnung: Zahnarzt<br />Zuständige Kammer: Zähneärztekammer Hessen<br />Verliehen in: Deutschland<br />Es gelten folgende berufsrechtliche Regelungen:<br />- Zahnheilkundegesetz (ZHG)<br />- Gebührenordnung für Zahnarzte (GOZ)</p>
+      <p>Berufsbezeichnung: Zahnarzt<br />Zuständige Kammer: Landeszahnärztekammer Hessen<br />Verliehen in: Deutschland<br />Es gelten folgende berufsrechtliche Regelungen:<br />- Zahnheilkundegesetz (ZHG)<br />- Gebührenordnung für Zahnärzte (GOZ)</p>
       <h3 className="text-lg font-semibold">Ausbildung</h3>
-      <p>Studium und Approbation an der LMU München<br />Anerkennung der Diplomarbeit in der Schweiz Bern<br />Bewilligung aus Kanton Luzern<br />Curriculum der Implantologie in Mainz</p>
-      <h3 className="text-lg font-semibold">Verantwortlich für den Inhalt nach Sect. 55 Abs. 2 RStV</h3>
-      <p>Dr. Faiz Eissa<br />Luisenplatz, 64283 Darmstadt</p>
+      <p>Studium und Approbation an der LMU München<br />Anerkennung der Diplomarbeit in Bern, Schweiz<br />Bewilligung des Kantons Luzern<br />Curriculum der Implantologie in Mainz</p>
+      <h3 className="text-lg font-semibold">Verantwortlich für journalistisch-redaktionelle Inhalte gemäß § 18 Abs. 2 MStV</h3>
+      <p>Dr. Faiz Eissa<br />Luisenplatz 4, 64283 Darmstadt</p>
       <h3 className="text-lg font-semibold">Haftungsausschluss</h3>
       <h4 className="text-base font-semibold">Haftung für Inhalte</h4>
-      <p>Die Inhalte unserer Seiten wurden mit grösster Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäss Sect. 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.</p>
+      <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.</p>
       <h4 className="text-base font-semibold">Haftung für Links</h4>
       <p>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.</p>
       <h3 className="text-lg font-semibold">Urheberrecht</h3>
       <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht.</p>
       <h3 className="text-lg font-semibold">Streitschlichtung</h3>
-      <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit. Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+      <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
     </div>
   );
 }
@@ -277,7 +277,7 @@ function DatenschutzContent() {
       <h3 className="text-lg font-semibold">1. Datenschutz auf einen Blick</h3>
       <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen.</p>
       <h3 className="text-lg font-semibold">2. Verantwortliche Stelle</h3>
-      <p>Dr. Faiz Eissa<br />{CLINIC}<br />Luisenplatz<br />64283 Darmstadt<br />Telefon: {PHONE}<br />E-Mail: info@dentalpraxis-luisenplatz.de</p>
+      <p>Dr. Faiz Eissa<br />{CLINIC}<br />Luisenplatz 4<br />64283 Darmstadt<br />Telefon: {PHONE}<br />E-Mail: info@dentalpraxis-luisenplatz.de</p>
       <h3 className="text-lg font-semibold">3. Hosting</h3>
       <p>Diese Website wird bei einem professionellen Hosting-Provider gehostet. Die auf dieser Website verarbeiteten Daten werden auf den Servern des Hosters gespeichert.</p>
       <h3 className="text-lg font-semibold">4. SSL-Verschlüsselung</h3>
@@ -285,18 +285,91 @@ function DatenschutzContent() {
       <h3 className="text-lg font-semibold">5. Kontaktformular</h3>
       <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
       <h3 className="text-lg font-semibold">6. Server-Log-Dateien</h3>
-      <p>Der Provider der Seiten erhebt und speichert automatisch Informationen in Server-Log-Dateien: Browsertyp, Betriebssystem, Referrer URL, Hostname, Uhrzeit der Serveranfrage, IP-Adresse.</p>
+      <p>Der Provider der Seiten erhebt und speichert automatisch Informationen in Server-Log-Dateien: Browsertyp, Betriebssystem, Referrer-URL, Hostname, Uhrzeit der Serveranfrage, IP-Adresse.</p>
       <h3 className="text-lg font-semibold">7. Google Analytics</h3>
       <p><em>Hinweis: Google Analytics ist derzeit nicht aktiv auf dieser Website.</em></p>
       <h3 className="text-lg font-semibold">8. Ihre Rechte</h3>
       <p>Sie haben jederzeit das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16 DSGVO), Löschung (Art. 17 DSGVO), Einschränkung der Verarbeitung (Art. 18 DSGVO), Widerspruch (Art. 21 DSGVO) und Datenübertragbarkeit (Art. 20 DSGVO).</p>
       <h3 className="text-lg font-semibold">9. Cookies</h3>
       <p>Diese Website verwendet keine Tracking-Cookies. Es werden lediglich technisch notwendige Cookies eingesetzt.</p>
-      <h3 className="text-lg font-semibold">10. Aufbewahrungsdaür</h3>
+      <h3 className="text-lg font-semibold">10. Aufbewahrungsdauer</h3>
       <p>Personenbezogene Daten werden gelöscht, sobald der Zweck der Speicherung entfällt.</p>
       <h3 className="text-lg font-semibold">11. Fragen zum Datenschutz</h3>
       <p>Telefon: {PHONE}<br />E-Mail: info@dentalpraxis-luisenplatz.de</p>
     </div>
+  );
+}
+
+/* ============================================================ */
+/*  TERMIN FORM (shared: contact section + dialog)                */
+/* ============================================================ */
+type TerminFormData = { name: string; telefon: string; email: string; nachricht: string; behandlung: string };
+
+function TerminForm({ idPrefix, formData, setFormData, sent, consent, setConsent, onOpenImpressum, onOpenDatenschutz, onSubmit }: {
+  idPrefix: string;
+  formData: TerminFormData;
+  setFormData: (data: TerminFormData) => void;
+  sent: boolean;
+  consent: boolean;
+  setConsent: (v: boolean) => void;
+  onOpenImpressum: () => void;
+  onOpenDatenschutz: () => void;
+  onSubmit: (e: FormEvent) => void;
+}) {
+  return (
+    <form onSubmit={onSubmit} className="space-y-4">
+      <div>
+        <Label htmlFor={`${idPrefix}-name`}>Name *</Label>
+        <Input id={`${idPrefix}-name`} required value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} placeholder="Ihr Name" className="mt-1" />
+      </div>
+      <div>
+        <Label htmlFor={`${idPrefix}-telefon`}>Telefon *</Label>
+        <Input id={`${idPrefix}-telefon`} type="tel" required value={formData.telefon} onChange={(e) => setFormData({ ...formData, telefon: e.target.value })} placeholder="Ihre Telefonnummer" className="mt-1" />
+      </div>
+      <div>
+        <Label htmlFor={`${idPrefix}-email`}>E-Mail</Label>
+        <Input id={`${idPrefix}-email`} type="email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} placeholder="Ihre E-Mail-Adresse" className="mt-1" />
+      </div>
+      <div>
+        <Label htmlFor={`${idPrefix}-behandlung`}>Behandlungswunsch</Label>
+        <Select value={formData.behandlung} onValueChange={(v) => setFormData({ ...formData, behandlung: v })}>
+          <SelectTrigger className="mt-1"><SelectValue placeholder="Bitte wählen..." /></SelectTrigger>
+          <SelectContent>
+            <SelectItem value="zahnreinigung">Professionelle Zahnreinigung</SelectItem>
+            <SelectItem value="implantate">Zahnimplantate</SelectItem>
+            <SelectItem value="bleaching">Bleaching</SelectItem>
+            <SelectItem value="kronen">Kronen & Brücken</SelectItem>
+            <SelectItem value="zahnfleisch">Zahnfleischbehandlung</SelectItem>
+            <SelectItem value="sonstiges">Sonstiges</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+      <div>
+        <Label htmlFor={`${idPrefix}-nachricht`}>Nachricht</Label>
+        <Textarea id={`${idPrefix}-nachricht`} value={formData.nachricht} onChange={(e) => setFormData({ ...formData, nachricht: e.target.value })} placeholder="Ihre Nachricht..." rows={4} className="mt-1" />
+      </div>
+      <div className="flex items-start gap-2.5 rounded-lg border border-primary/20 bg-primary/5 p-3">
+        <input
+          id={`${idPrefix}-consent`}
+          name={`${idPrefix}-consent`}
+          type="checkbox"
+          required
+          checked={consent}
+          onChange={(e) => setConsent(e.target.checked)}
+          className="mt-0.5 size-4 shrink-0 cursor-pointer accent-primary"
+        />
+        <p className="text-xs text-muted-foreground leading-relaxed">
+          Ich habe die{' '}
+          <button type="button" onClick={onOpenDatenschutz} className="text-primary font-medium underline underline-offset-2 hover:text-primary/80">Datenschutzerklärung</button>
+          {' '}und das{' '}
+          <button type="button" onClick={onOpenImpressum} className="text-primary font-medium underline underline-offset-2 hover:text-primary/80">Impressum</button>
+          {' '}gelesen und stimme der Verarbeitung meiner Daten zur Terminvereinbarung zu. <span className="text-destructive">*</span>
+        </p>
+      </div>
+      <Button type="submit" disabled={sent} className="w-full gap-2 bg-cta hover:bg-cta/90 text-white font-semibold">
+        {sent ? <><CheckCircle2 className="size-4" />WhatsApp wird geöffnet</> : <><Send className="size-4" />Anfrage senden</>}
+      </Button>
+    </form>
   );
 }
 
@@ -308,6 +381,8 @@ export default function Home() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [impressumOpen, setImpressumOpen] = useState(false);
   const [datenschutzOpen, setDatenschutzOpen] = useState(false);
+  const [formOpen, setFormOpen] = useState(false);
+  const [consent, setConsent] = useState(false);
   const [formData, setFormData] = useState({ name: '', telefon: '', email: '', nachricht: '', behandlung: '' });
   const [sent, setSent] = useState(false);
 
@@ -336,7 +411,7 @@ export default function Home() {
     };
 
     const lines = [
-      'Neü Terminanfrage von der Website:',
+      'Neue Terminanfrage von der Website:',
       `Name: ${formData.name}`,
       `Telefon: ${formData.telefon}`,
       formData.email ? `E-Mail: ${formData.email}` : undefined,
@@ -445,7 +520,7 @@ export default function Home() {
                 </motion.p>
 
                 <motion.div variants={fadeUp} className="mt-8 flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="gap-2 text-base px-8 bg-cta text-white hover:bg-cta/90 font-semibold cta-pulse" onClick={() => scrollTo('#kontakt')}>
+                  <Button size="lg" className="gap-2 text-base px-8 bg-cta text-white hover:bg-cta/90 font-semibold cta-pulse" onClick={() => setFormOpen(true)}>
                     Termin vereinbaren
                     <ChevronRight className="size-4" />
                   </Button>
@@ -485,7 +560,7 @@ export default function Home() {
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold text-foreground mb-3">{service.title}</h3>
                     <p className="text-muted-foreground leading-relaxed mb-4">{service.description}</p>
-                    <button onClick={() => scrollTo('#kontakt')} className="inline-flex items-center gap-1 text-primary font-semibold text-sm hover:gap-2 transition-all">
+                    <button onClick={() => setFormOpen(true)} className="inline-flex items-center gap-1 text-primary font-semibold text-sm hover:gap-2 transition-all">
                       Termin vereinbaren <ChevronRight className="size-4" />
                     </button>
                   </CardContent>
@@ -504,7 +579,7 @@ export default function Home() {
                 Ihr Partner für moderne Zahnmedizin in Darmstadt
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-10 max-w-3xl mx-auto">
-                Bei {CLINIC} verbinden wir moderne Technologie, individülle Betreuung und langjährige Erfahrung, um Ihnen die bestmögliche Behandlung in einer angenehmen Atmosphäre zu bieten.
+                In der {CLINIC} verbinden wir moderne Technologie, individuelle Betreuung und langjährige Erfahrung, um Ihnen die bestmögliche Behandlung in einer angenehmen Atmosphäre zu bieten.
               </p>
             </motion.div>
 
@@ -647,7 +722,7 @@ export default function Home() {
                 <p className="text-white/85 text-lg md:text-xl mb-10">Ihr Weg zu einem gesunden und strahlenden Lächeln beginnt hier. Vereinbaren Sie noch heute Ihren Termin.</p>
               </motion.div>
               <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="gap-2 text-base px-10 bg-cta text-white hover:bg-cta/90 font-semibold shadow-lg" onClick={() => scrollTo('#kontakt')}>
+                <Button size="lg" className="gap-2 text-base px-10 bg-cta text-white hover:bg-cta/90 font-semibold shadow-lg" onClick={() => setFormOpen(true)}>
                   Termin vereinbaren <ChevronRight className="size-4" />
                 </Button>
                 <a href={PHONE_HREF}>
@@ -696,41 +771,17 @@ export default function Home() {
               <Card className="shadow-lg border-0">
                 <CardContent className="p-6 lg:p-8">
                   <h3 className="text-xl font-bold text-foreground mb-6">Termin anfragen</h3>
-                  <form onSubmit={handleFormSubmit} className="space-y-4">
-                    <div>
-                      <Label htmlFor="name">Name *</Label>
-                      <Input id="name" required value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} placeholder="Ihr Name" className="mt-1" />
-                    </div>
-                    <div>
-                      <Label htmlFor="telefon">Telefon *</Label>
-                      <Input id="telefon" type="tel" required value={formData.telefon} onChange={(e) => setFormData({ ...formData, telefon: e.target.value })} placeholder="Ihre Telefonnummer" className="mt-1" />
-                    </div>
-                    <div>
-                      <Label htmlFor="email">E-Mail</Label>
-                      <Input id="email" type="email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} placeholder="Ihre E-Mail-Adresse" className="mt-1" />
-                    </div>
-                    <div>
-                      <Label htmlFor="behandlung">Behandlungswunsch</Label>
-                      <Select value={formData.behandlung} onValueChange={(v) => setFormData({ ...formData, behandlung: v })}>
-                        <SelectTrigger className="mt-1"><SelectValue placeholder="Bitte wählen..." /></SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="zahnreinigung">Professionelle Zahnreinigung</SelectItem>
-                          <SelectItem value="implantate">Zahnimplantate</SelectItem>
-                          <SelectItem value="bleaching">Bleaching</SelectItem>
-                          <SelectItem value="kronen">Kronen & Brücken</SelectItem>
-                          <SelectItem value="zahnfleisch">Zahnfleischbehandlung</SelectItem>
-                          <SelectItem value="sonstiges">Sonstiges</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                    <div>
-                      <Label htmlFor="nachricht">Nachricht</Label>
-                      <Textarea id="nachricht" value={formData.nachricht} onChange={(e) => setFormData({ ...formData, nachricht: e.target.value })} placeholder="Ihre Nachricht..." rows={4} className="mt-1" />
-                    </div>
-                    <Button type="submit" disabled={sent} className="w-full gap-2 bg-cta hover:bg-cta/90 text-white font-semibold">
-                      {sent ? <><CheckCircle2 className="size-4" />WhatsApp wird geöffnet</> : <><Send className="size-4" />Anfrage senden</>}
-                    </Button>
-                  </form>
+                  <TerminForm
+                    idPrefix="kontakt"
+                    formData={formData}
+                    setFormData={setFormData}
+                    sent={sent}
+                    consent={consent}
+                    setConsent={setConsent}
+                    onOpenImpressum={() => setImpressumOpen(true)}
+                    onOpenDatenschutz={() => setDatenschutzOpen(true)}
+                    onSubmit={handleFormSubmit}
+                  />
                 </CardContent>
               </Card>
             </motion.div>
@@ -790,7 +841,7 @@ export default function Home() {
       {/* ==================== WHATSAPP FLOATING BUTTON ==================== */}
       <div className="fixed bottom-6 right-6 z-50">
         <a
-          href={`https://wa.me/${PHONE.replace(/\D/g, '')}?text=Hallo%20Dentalpraxis%20am%20Luisenplatz%2C%20ich%20moechte%20einen%20Termin%20vereinbaren.%0A%0AMeine%20Daten%3A%0AName%3A%20%0ATelefon%3A%20${encodeURIComponent(PHONE)}`}
+          href={`https://wa.me/${PHONE.replace(/\D/g, '')}?text=Hallo%20Dentalpraxis%20am%20Luisenplatz%2C%20ich%20m%C3%B6chte%20einen%20Termin%20vereinbaren.%0A%0AMeine%20Daten%3A%0AName%3A%20%0ATelefon%3A%20${encodeURIComponent(PHONE)}`}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="WhatsApp Kontakt aufnehmen"
@@ -808,12 +859,35 @@ export default function Home() {
         </a>
       </div>
 
+      {/* ==================== TERMIN FORM MODAL ==================== */}
+      <Dialog open={formOpen} onOpenChange={setFormOpen}>
+        <DialogContent className="max-w-lg max-h-[85vh]">
+          <DialogHeader>
+            <DialogTitle>Termin vereinbaren</DialogTitle>
+            <DialogDescription>Hinterlassen Sie Ihre Daten — wir melden uns schnellstmöglich bei Ihnen.</DialogDescription>
+          </DialogHeader>
+          <ScrollArea className="max-h-[60vh] pr-4">
+            <TerminForm
+              idPrefix="dialog"
+              formData={formData}
+              setFormData={setFormData}
+              sent={sent}
+              consent={consent}
+              setConsent={setConsent}
+              onOpenImpressum={() => setImpressumOpen(true)}
+              onOpenDatenschutz={() => setDatenschutzOpen(true)}
+              onSubmit={handleFormSubmit}
+            />
+          </ScrollArea>
+        </DialogContent>
+      </Dialog>
+
       {/* ==================== LEGAL MODALS ==================== */}
       <Dialog open={impressumOpen} onOpenChange={setImpressumOpen}>
         <DialogContent className="max-w-2xl max-h-[85vh]">
           <DialogHeader>
             <DialogTitle>Impressum</DialogTitle>
-            <DialogDescription>Angaben gemäss Sect. 5 TMG</DialogDescription>
+            <DialogDescription>Angaben gemäß § 5 DDG</DialogDescription>
           </DialogHeader>
           <ScrollArea className="max-h-[60vh] pr-4"><ImpressumContent /></ScrollArea>
         </DialogContent>
